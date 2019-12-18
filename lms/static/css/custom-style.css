@@ -1,0 +1,304 @@
+/*-----------------------------------------------------*/
+/* edX UChile Custom Style-----------------------------*/
+/*-INDICE----------------------------------------------*/
+/*-----------------------------------------------------*/
+/* 1. Header-------------------------------------------*/
+/* 1.1 Header general----------------------------------*/
+/* 1.2 Header logo generado por edX--------------------*/
+/* 1.3 Header barra navegacion-------------------------*/
+/* 1.3.1 Header Responsivo-----------------------------*/
+/* 1.4 Header botonera login/Register------------------*/
+/* 2. Slide--------------------------------------------*/
+/* 2.1 Slide: dimensionado responsivo movil/escritorio-*/
+/* 2.1 Slide: dimensionado imagen responsivo-----------*/
+/* 3. Grid cursos--------------------------------------*/
+/* 4. Footer-------------------------------------------*/
+/*-----------------------------------------------------*/
+
+
+
+/* 1. Header-------------------------------------------*/
+/* 1.1 Header general----------------------------------*/
+.view-login header.global, .view-login header.global-new, .view-login header.global.slim, .view-passwordreset header.global, .view-passwordreset header.global-new, .view-passwordreset header.global.slim, .view-register header.global, .view-register header.global-new, .view-register header.global.slim, body header.global, body header.global-new, body header.global.slim {
+width: auto;
+height: auto;
+position: relative;
+min-height: 50px;
+padding: 0;
+border: 0 none;
+background-color: #fff !important;
+margin-bottom: 0;
+box-shadow: none;
+border-radius: 0!important;
+}
+.view-login header.global-new>nav, .view-login header.global.slim>nav, .view-login header.global>nav, .view-passwordreset header.global-new>nav, .view-passwordreset header.global.slim>nav, .view-passwordreset header.global>nav, .view-register header.global-new>nav, .view-register header.global.slim>nav, .view-register header.global>nav, body header.global-new>nav, body header.global.slim>nav, body header.global>nav {
+padding: 5px;
+}
+/* 1.2 Header logo generado por edX--------------------*/
+header.global h1.logo {
+display: none;
+}
+/* 1.3 Header barra navegacion-------------------------*/
+.navbar {
+position: relative;
+min-height: 50px;
+margin-bottom: 0px;
+border: 1px solid transparent;
+background-color: #fff;
+}
+.navbar-nav {
+float: left;
+margin-top: 0px;
+width:100%;    
+}
+.navbar-static-top {
+border-radius: 0;
+background-color: #fff;
+}
+header.global .nav-global {
+margin-top: 10px;
+list-style: none;
+float: right;
+padding-left: 10px;
+}
+/* 1.3.1 Header Responsivo-----------------------------*/
+.navbar-brand{
+    width: 100%;
+    height: 100%;      
+}
+.navbar-toggle {
+position: relative;
+float: right;
+margin-right: 15px;
+padding: 9px 10px;
+margin-top: 8px;
+margin-bottom: 8px;
+background-color: transparent;
+background-image: none;
+border: 1px solid #00aff0;
+border-radius: 4px;
+}
+.navbar-toggle .icon-bar {
+display: block;
+width: 22px;
+height: 2px;
+border-radius: 1px;
+background-color: #00aff0;
+}
+body header.global .navbar-nav>li>a{color: #000;}
+body header.global .navbar-nav>li>a:hover{background-color:#00aff0;}
+@media (max-width: 480px){
+.view-login header.global-new>nav .nav-global, .view-login header.global.slim>nav .nav-global, .view-login header.global>nav .nav-global, .view-passwordreset header.global-new>nav .nav-global, .view-passwordreset header.global.slim>nav .nav-global, .view-passwordreset header.global>nav .nav-global, .view-register header.global-new>nav .nav-global, .view-register header.global.slim>nav .nav-global, .view-register header.global>nav .nav-global, body header.global-new>nav .nav-global, body header.global.slim>nav .nav-global, body header.global>nav .nav-global {
+display: table;
+}
+.navbar-nav {
+float: left;
+margin-top: 0px;
+width: 100%;
+}    
+}
+/* 1.4 Header botonera login/Register------------------*/
+.view-login .content-wrapper, .view-passwordreset .content-wrapper, .view-register .content-wrapper, body .content-wrapper {
+width: auto;
+height: auto;
+margin: 0;
+padding: 0;
+background: 0 0;
+padding-bottom: 40px;
+background-color: #fff;
+min-height: 0px;    
+}
+.view-login header.global-new>nav .nav-global a.cta-register, .view-login header.global.slim>nav .nav-global a.cta-register, .view-login header.global>nav .nav-global a.cta-register, .view-passwordreset header.global-new>nav .nav-global a.cta-register, .view-passwordreset header.global.slim>nav .nav-global a.cta-register, .view-passwordreset header.global>nav .nav-global a.cta-register, .view-register header.global-new>nav .nav-global a.cta-register, .view-register header.global.slim>nav .nav-global a.cta-register, .view-register header.global>nav .nav-global a.cta-register, body header.global-new>nav .nav-global a.cta-register, body header.global.slim>nav .nav-global a.cta-register, body header.global>nav .nav-global a.cta-register {
+display: block;
+width: auto;
+height: auto;
+font: inherit;
+background: 0 0;
+display: inline-block;
+font-weight: 400;
+text-align: center;
+vertical-align: middle;
+-ms-touch-action: manipulation;
+touch-action: manipulation;
+cursor: pointer;
+background-image: none;
+border: 1px solid transparent;
+white-space: nowrap;
+font-size: 16px;
+line-height: 1.625;
+border-radius: 4px;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+color: #00aff0;
+background-color: #fff;
+border-color: #00aff0;
+text-shadow: none;
+text-overflow: ellipsis;
+transition: all .1s ease-in;
+box-shadow: none;
+margin: 0;
+padding: .5em 1.2em;
+outline: 0;
+overflow: hidden;
+text-transform: none;
+}
+header.global .nav-courseware li, header.global .nav-courseware div {
+display: inline-block;
+margin-top: 10px;
+}
+.view-login header.global-new>nav .nav-global a.cta-register,.view-login header.global.slim>nav .nav-global a.cta-register,.view-login header.global>nav .nav-global a.cta-register,.view-passwordreset header.global-new>nav .nav-global a.cta-register,.view-passwordreset header.global.slim>nav .nav-global a.cta-register,.view-passwordreset header.global>nav .nav-global a.cta-register,.view-register header.global-new>nav .nav-global a.cta-register,.view-register header.global.slim>nav .nav-global a.cta-register,.view-register header.global>nav .nav-global a.cta-register,body header.global-new>nav .nav-global a.cta-register,body header.global.slim>nav .nav-global a.cta-register,body header.global>nav .nav-global a.cta-register:hover
+{
+	background-color: #00aff0;
+	color: #fff;
+}
+.view-login, .view-passwordreset, .view-register, body {
+background-color: #fff;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+border-color: #fff;
+}
+input[type="submit"]:hover:not(:disabled), input[type="button"]:hover:not(:disabled), button:hover:not(:disabled), .button:hover:not(:disabled) {
+cursor: pointer;
+background-color: #00aff0;
+background-image: none;
+background-image: none;
+}
+.view-login header.global-new>nav .nav-global a.cta-register, .view-login header.global.slim>nav .nav-global a.cta-register, .view-login header.global>nav .nav-global a.cta-register, .view-passwordreset header.global-new>nav .nav-global a.cta-register, .view-passwordreset header.global.slim>nav .nav-global a.cta-register, .view-passwordreset header.global>nav .nav-global a.cta-register, .view-register header.global-new>nav .nav-global a.cta-register, .view-register header.global.slim>nav .nav-global a.cta-register, .view-register header.global>nav .nav-global a.cta-register, body header.global-new>nav .nav-global a.cta-register, body header.global.slim>nav .nav-global a.cta-register, body header.global>nav .nav-global a.cta-register:hover {
+background-color: #00aff0;
+color: #fff;
+}
+.view-login header.global-new>nav ol.user>li.primary>a.dropdown, .view-login header.global.slim>nav ol.user>li.primary>a.dropdown, .view-login header.global>nav ol.user>li.primary>a.dropdown, .view-passwordreset header.global-new>nav ol.user>li.primary>a.dropdown, .view-passwordreset header.global.slim>nav ol.user>li.primary>a.dropdown, .view-passwordreset header.global>nav ol.user>li.primary>a.dropdown, .view-register header.global-new>nav ol.user>li.primary>a.dropdown, .view-register header.global.slim>nav ol.user>li.primary>a.dropdown, .view-register header.global>nav ol.user>li.primary>a.dropdown, body header.global-new>nav ol.user>li.primary>a.dropdown, body header.global.slim>nav ol.user>li.primary>a.dropdown, body header.global>nav ol.user>li.primary>a.dropdown {
+padding: 9.3px 10px;
+border-left: none;
+border-radius: 0 4px 4px 0;
+letter-spacing: normal;
+}
+.view-login header.global-new>nav ol.user ul.dropdown-menu, .view-login header.global.slim>nav ol.user ul.dropdown-menu, .view-login header.global>nav ol.user ul.dropdown-menu, .view-passwordreset header.global-new>nav ol.user ul.dropdown-menu, .view-passwordreset header.global.slim>nav ol.user ul.dropdown-menu, .view-passwordreset header.global>nav ol.user ul.dropdown-menu, .view-register header.global-new>nav ol.user ul.dropdown-menu, .view-register header.global.slim>nav ol.user ul.dropdown-menu, .view-register header.global>nav ol.user ul.dropdown-menu, body header.global-new>nav ol.user ul.dropdown-menu, body header.global.slim>nav ol.user ul.dropdown-menu, body header.global>nav ol.user ul.dropdown-menu {
+width: auto;
+height: auto;
+padding: 0;
+z-index: 10;
+top: 36px;
+left: initial;
+right: 0;
+box-shadow: none;
+border: 1px solid #00aff0;
+border-top: 1px solid #00aff0;
+border-top-right-radius: 0;
+background-color: #fff;
+}
+.view-howitworks .nav-global-01 a, .view-courses .nav-global-02 a, .view-schools .nav-global-03 a, .view-register .nav-global-04 a {
+text-decoration: none;
+color: #fff !important;
+}
+.view-login header.global-new>nav ol.user>li.primary>a.user-link, .view-login header.global.slim>nav ol.user>li.primary>a.user-link, .view-login header.global>nav ol.user>li.primary>a.user-link, .view-passwordreset header.global-new>nav ol.user>li.primary>a.user-link, .view-passwordreset header.global.slim>nav ol.user>li.primary>a.user-link, .view-passwordreset header.global>nav ol.user>li.primary>a.user-link, .view-register header.global-new>nav ol.user>li.primary>a.user-link, .view-register header.global.slim>nav ol.user>li.primary>a.user-link, .view-register header.global>nav ol.user>li.primary>a.user-link, body header.global-new>nav ol.user>li.primary>a.user-link, body header.global.slim>nav ol.user>li.primary>a.user-link, body header.global>nav ol.user>li.primary>a.user-link {
+max-width: 100%;
+}
+.nav-global-01 a:hover{
+text-decoration: none;
+color: #00aff0 !important;
+}
+/* 2. Slide--------------------------------------------*/
+/* 2.1 Slide: dimensionado responsivo movil/escritorio-*/
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+    max-height: 300px;
+    min-height: 200px;
+}
+/* 2.1 Slide: dimensionado imagen responsivo-----------*/
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+display: inherit;
+max-width: 100%;
+height: auto;
+}
+/* 3. Grid cursos--------------------------------------*/
+.content-wrapper>.home>header {
+width: auto;
+height: auto;
+box-shadow: none;
+background-size: 100% 100%;
+border: none;
+background-image: none;
+margin: 0;
+padding: 0px;
+}
+.content-wrapper>.home {
+margin: 0;
+background: #3299cc;
+}
+/* 4. Footer-------------------------------------------*/
+.social-item{
+	list-style:none;
+}
+/* 5. Formularios--------------------------------------*/
+.content-wrapper>.register .content form .group-form-personalinformation, .content-wrapper>.register .content form .group-form-personalinformation2 {
+display: block;
+}
+p{
+	text-align: justify;
+}
+
+.home>header .media {
+  background: #fff;
+  background: rgba(255,255,255,0.93);
+  border: 0px solid #646464;
+  border-left: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 200px;
+  width: 360px;
+  float: left;
+  padding: 4px;
+  vertical-align: top;
+  z-index: 2;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.content-wrapper>.home>header {
+  width: auto;
+  height: auto;
+  box-shadow: none;
+  background-size: 100% 100%;
+  border: none;
+  background-image: none;
+  margin: 0;
+  padding: 0px;
+  border-bottom: 5px solid #00aff0;
+  background-color: #FFFFFF;
+}
+.no-background{
+  background-color: transparent !important; 
+  border: none !important;
+}
+.h2-white{
+	color:#fff;
+}
+
+p.p-blue{
+  color:#3299cc;
+  font-size: 15px;
+  width: 84%;
+}
+
+h2.h2-blue-1{
+  color:#00aff0;
+  font-size: 20px;
+  margin-top: 0px;
+
+}
+.home>header .media .hero{
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background: url("../images/portada/logo_video.png") center no-repeat;
+  background-size: cover;
+}

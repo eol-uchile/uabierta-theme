@@ -1,0 +1,14 @@
+.nav-not-signedin-signup {
+	display:none !important;
+}
+.view-signup .content header .action, .view-signin .content header .action, .view-util .content header .action{
+	display:none !important;
+}
+.view-howitworks.not-signedin .content-cta .list-actions .action.action-primary{
+	display:none !important;
+}
+.wrapper-header .branding a img{
+	height: 65px !important;
+	max-height: 65px !important;
+}
+

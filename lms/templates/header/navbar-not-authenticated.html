@@ -1,0 +1,179 @@
+## mako
+
+<%page expression_filter="h"/>
+
+<%namespace name='static' file='../static_content.html'/>
+<%namespace file='../main.html' import="login_query"/>
+
+<%!
+from django.urls import reverse
+from django.utils.translation import ugettext as _
+from six import text_type
+%>
+
+<%
+  mktg_site_enabled = static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False))
+  courses_are_browsable = settings.FEATURES.get('COURSES_ARE_BROWSABLE')
+  #allows_login = not settings.FEATURES['DISABLE_LOGIN_BUTTON'] and not combined_login_and_register
+  allows_login = not settings.FEATURES['DISABLE_LOGIN_BUTTON']
+  can_discover_courses = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
+  restrict_enroll_for_course = course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain
+  allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION'))
+%>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<style>
+
+.button-signin {
+  border-radius: 30px;
+  display: inline-block;
+  padding: 10px;
+  width: 150px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 16px;
+  line-height: normal;
+  text-align: center;
+}
+
+.background-blue {
+  background: #2F80ED;
+}
+
+.background-orange {
+  background: #F2994A;
+}
+
+@media (min-width: 992px) {
+  .button-signin {
+    color: white !important;
+  }
+}
+
+.navbar-item-info {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500 !important;
+  font-size: 16px;
+  line-height: normal;
+  text-align: center;
+
+  color: #4F4F4F;
+  /*box-sizing: border-box;*/
+}
+
+.padder {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.header-item {
+  font-family: Roboto !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  line-height: normal !important;
+  text-align: center !important;
+
+  color: #4F4F4F !important;
+}
+
+.global-header {
+  margin-bottom: 40px;
+}
+
+</style>
+
+<nav class="nav-links" aria-label=${_("Supplemental Links")}>
+  <div class="main">
+    ##<div class="mobile-nav-item hidden-mobile nav-item "><a class="navbar-item-info" href="/about">Acerca de</a></div>
+    ##<div class="mobile-nav-item hidden-mobile nav-item"><a href="/faq">Preguntas Frecuentes</a></div>
+
+    % if mktg_site_enabled:
+      <div class="mobile-nav-item hidden-mobile nav-item">
+        <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
+      </div>
+      % if courses_are_browsable:
+        <div class="mobile-nav-item hidden-mobile nav-item">
+          <a href="${marketing_link('COURSES')}">${_("Courses")}</a>
+        </div>
+      % endif
+      <div class="mobile-nav-item hidden-mobile nav-item">
+        <a href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
+      </div>
+    % endif
+    % if allows_login:
+      % if can_discover_courses:
+        <div class="mobile-nav-item hidden-mobile nav-item">
+          <a href="/courses">${_('Explore courses')}</a>
+        </div>
+      %endif
+    % endif
+  </div>
+  <style>
+    @media (min-width: 992px) {
+      .uabierta-button {
+        display: block;
+        display: inline-block;
+        font-weight: 400;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        font-size: 16px;
+        line-height: 1.625;
+        border-radius: 4px;
+        background-color: #fff;
+        border-color: #00aff0;
+        transition: all .1s ease-in;
+        box-shadow: none;
+        margin: 0;
+        padding: .5em 1.2em;
+      }
+      .uabierta-button {
+        color: #00aff0 !important;
+      }
+      .uabierta-button:hover {
+        background-color: #00aff0;
+        color: #fff !important;
+      }
+    }
+  </style>
+  <div class="secondary">
+    <div>
+        <div class="mobile-nav-item hidden-mobile nav-item"><a class="navbar-item-info header-item" href="/">Inicio</a></div>
+        <span class="padder"></span>
+        <div class="mobile-nav-item hidden-mobile nav-item"><a class="navbar-item-info header-item" href="/about">UAbierta</a></div>
+        <span class="padder"></span>
+        <div class="mobile-nav-item hidden-mobile nav-item "><a class="navbar-item-info header-item" href="https://noticias.uabierta.uchile.cl/">Noticias</a></div>
+        <span class="padder"></span>
+        <div class="mobile-nav-item hidden-mobile nav-item "><a class="navbar-item-info header-item" href="/faq">Preguntas Frecuentes</a></div>
+        <span class="padder"></span>
+        <div class="mobile-nav-item hidden-mobile nav-item "><a class="navbar-item-info header-item" href="/contact">Contacto</a></div>
+        <span class="padder"></span>
+      % if allows_login:
+        % if restrict_enroll_for_course:
+          <div class="mobile-nav-item hidden-mobile nav-item">
+          </div>
+          <div class="mobile-nav-item hidden-mobile nav-item">
+            <a class="sign-in-btn btn" href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}">${_("Sign in")}</a>
+          </div>
+        % else:
+          % if allow_public_account_creation:
+          <div class="mobile-nav-item hidden-mobile nav-item">
+              <a class="navbar-item-info header-item uabierta-button" href="/register${login_query()}">
+                ${_("Register")}
+                </a>
+          </div>
+          % endif
+          <div class="mobile-nav-item hidden-mobile nav-item">
+              <a class="navbar-item-info header-item uabierta-button" href="/login${login_query()}">
+                ${_("Sign in")}
+              </a>
+          </div>
+        % endif
+      % endif
+    </div>
+  </div>
+</nav>

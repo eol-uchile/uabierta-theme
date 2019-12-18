@@ -1,0 +1,103 @@
+@media (max-width: 991px){
+	.global-header .header-logo a .logo{
+		height: 50px !important;
+	}
+	.course-info .course-sidebar{
+		float:none;
+		width: 100%;
+	}
+	.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register{
+		width:initial;
+	}
+
+}
+@media (min-width: 992px){
+	.global-header .nav-links .secondary {
+		float: right;
+		margin: 40px 80px 0 0;
+	}
+	.global-header .nav-links .secondary a.register-btn{
+		display:none;
+	}
+	.global-header .header-logo a{
+		margin: 15px 0 0 25px;
+	}
+	.global-header .header-logo a .logo{
+		height: 90px !important;
+	}
+	.global-header .header-logo .course-header{
+		margin: 50px 0px 0 40px;
+	}
+	nav.eol-menu{
+		margin:10px;
+	}	
+	.eol-menu .nav-item{
+		display:inline-block;
+		margin-right:15px;
+	}
+	.global-header .nav-links .secondary{
+		margin: 60px 40px 0 0;
+	}
+	.global-header{
+		padding:0;
+	}
+}
+.course-info header.course-profile{
+	padding-top: 0;
+	height: auto;
+}
+.wrapper-footer footer .colophon .nav-colophon li{
+	list-style-type: none;
+}
+.global-header{
+	border:none;
+	box-shadow:none;
+}
+/**ficus*/
+div.login-register div.toggle-form{
+	display:none !important;
+}
+.header-global h1.logo img {
+	height: 90px !important;
+}
+.header-global{
+	height: 126px !important;
+}
+li.item.nav-courseware-01{
+	padding-top:40px;
+	margin-bottom:16px;
+}
+.header-global  ol.user{
+	padding-top:40px;
+}
+.header-global a.doc-link {
+	padding-top:40px;
+}
+.header-global .nav-global {
+    padding-top:40px;
+}
+main.static_pages{
+	margin:32px;
+}
+.home > header {
+	background-size: cover;
+	background-position: 50%;
+
+	.outer-wrapper {
+		padding-top: 150px;
+	    padding-bottom: 150px;
+	}
+	.title {
+		background: transparent;
+		box-shadow: none;
+		margin-left: 0;
+
+		> .heading-group h1 {
+			color: #fff;
+			text-shadow: none;
+		}
+		> .heading-group p {
+			color: #fff;
+		}
+	}
+}
