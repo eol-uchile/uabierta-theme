@@ -20,7 +20,7 @@ from branding import api as branding_api
   ##<a href="${branding_api.get_home_url()}">
     <a href="/">
     <%block name="navigation_logo">
-    <img  class="logo" src="${static.url('uabierta/images/uabierta/portada/logo_cabecera.png')}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+    <img  class="logo" src="${static.url('edx-uabierta/images/uabierta/portada/logo_cabecera.png')}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
     </%block>
   </a>
   % if course and request.path != reverse('about_course', args=[text_type(course.id)]):

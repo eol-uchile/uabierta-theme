@@ -4,126 +4,54 @@
 from django.utils.translation import ugettext as _
 from django.urls import reverse
 from six import text_type
-
+import locale
 from django.utils import timezone
-now = timezone.now()
-
+now = timezone.now() 
 %>
 <%page args="course" expression_filter="h"/>
-<style>
-  .course-description {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 17px;
-    text-transform: none;
-    margin: 10px;
-
-    color: #4F4F4F;
-  }
-
-  .course-title span {
-    margin-bottom: 0px;
-    height: auto !important;
-    margin-top: 15px !important;
-  }
-
-  .course-date {
-    background-color: #27AE60;
-    color: #FFFFFF !important;
-    position: absolute;
-    bottom: 0px;
-    text-align: center;
-    width: 100%;
-    font-weight: bold;
-    padding: 5px 0 !important;
-  }
-
-  .course-date-ended {
-    background-color: #C4C4C4;
-    color: #FFFFFF !important;
-    position: absolute;
-    bottom: 0px;
-    text-align: center;
-    width: 100%;
-    padding: 5px !important;
-  }
-
-  .course {
-    border: none !important;
-    background: #F2F2F2 !important;
-  }
-
-  .courses {
-    margin-bottom: 40px;
-  }
-
-  .course-info {
-    height: 200px !important;
-  }
-
-  .course-more-info {
-    top: 45px !important;
-    border: 2px solid #FFFFFF !important;
-    box-sizing: border-box !important;
-    border-radius: 30px !important;
-    background: transparent !important;
-  }
-
-  .cover-image::before {
-    height: 140px !important;
-    background: linear-gradient(93.3deg, #054F98 -1.67%, #1AC4EF 101.06%) !important;
-  }
-
-  .cover-image {
-    height: 140px !important;
-  }
-
-  .course-info .course-sidebar .important-dates li .icon {
-    margin: 0px 10px 0 0 !important;
-  }
-
-</style>
 
 <article class="course" id="${course.id}" role="region" aria-label="${course.display_name_with_default}">
   <a href="${reverse('about_course', args=[text_type(course.id)])}">
-    <header class="course-image">
-      <div class="cover-image">
-        <img class="cover-image" src="${course.course_image_url}" alt="${course.display_name_with_default} ${course.display_number_with_default}" />
-        <div class="learn-more course-more-info" aria-hidden="true">Más Información</div>
+    <div class="inner-wrapper">
+      <header class="course-preview">
+        <hgroup>
+          <h2>
+            <span class="course-number"></span>
+            ${course.display_name_with_default}
+          </h2>
+        </hgroup>
+        <div class="info-link">➔</div>
+      </header>
+      <section class="info">
+         <div class="cover-image">
+            <img src="${course.course_image_url}" alt="${course.display_name_with_default} ${course.display_number_with_default}" />            
+        </div>      
+        <div class="desc">
+          % if course.end is not None and now is not None and course.end < now:
+            <p style="text-align: justify;color: inherit;font: inherit;margin: 0 0 1em;">Curso finalizado.</p>                     
+          % elif course.enrollment_end is not None and course.enrollment_end < now:
+            <p style="text-align: justify;color: inherit;font: inherit;margin: 0 0 1em;">Inscripciones cerradas.</p> 
+          %elif course.short_description is not None:                          
+            <p style="text-align: justify;color: inherit;font: inherit;margin: 0 0 1em;">${course.short_description}</p>
+          %else:                          
+            <p style="text-align: justify;color: inherit;font: inherit;margin: 0 0 1em;">Sin descripción</p>
+          % endif    
+          
+        </div>
+        <div class="bottom" >
+          <span class="university">Universidad_de_Chile</span>           
+        <% 
+          if course.start is not None:
+              course_date_string = course.start.strftime('%d %b %Y') 
+          else:
+              course_date_string = ''
+        %>        
+        <span class="start-date">${course_date_string}</span>           
+        </div>
+      </section>
+      <div class="meta-info">
+        <p class="university">Universidad_de_Chile</p>
       </div>
-    </header>
-    <div class="course-info" aria-hidden="true">
-      <h2 class="course-name">
-        <span class="course-title" style="margin-bottom: 0px; height: auto;">${course.display_name_with_default}</span>
-        <p class="course-description">${course.short_description}</p>
-      </h2>
-      <%
-      if course.start is not None:
-          course_date_string = course.start.strftime('%Y-%m-%dT%H:%M:%S%z')
-      else:
-          course_date_string = ''
-      %>
-      % if course.end is not None and now is not None and course.end < now:
-        <div class="course-date course-date-ended" aria-hidden="true">Curso Finalizado</div>
-      % elif course.advertised_start is not None:
-          <div class="course-date" aria-hidden="true">${_("Starts")}: ${course.advertised_start}</div>
-      % else:
-          <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}" data-string="${_("Starts: {date}")}"></div>
-      % endif
-    </div>
-    <div class="sr">
-      <ul>
-        <li>${course.display_org_with_default}</li>
-        <li>${course.display_number_with_default}</li>
-
-        % if course.advertised_start is not None:
-            <li>${_("Starts")}: <time itemprop="startDate">${course.advertised_start}</time></li>
-        % else:
-            <li>${_("Starts")}: <time class="localized_datetime" itemprop="startDate" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}"></time></li>
-        % endif
-      </ul>
     </div>
   </a>
 </article>
