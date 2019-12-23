@@ -130,21 +130,6 @@ from openedx.core.djangolib.markup import HTML, Text
 	color:#fff
 }
 
-@media (min-width:1200px){
-	.view-login .leanModal_box.video-modal,.view-login .modal.video-modal,.view-passwordreset .leanModal_box.video-modal,.view-passwordreset .modal.video-modal,.view-register .leanModal_box.video-modal,.view-register .modal.video-modal,body .leanModal_box.video-modal,body .modal.video-modal{
-		width:1170px
-	}
-}
-@media (min-width: 992px){
-.view-login .leanModal_box.video-modal, .view-login .modal.video-modal, .view-passwordreset .leanModal_box.video-modal, .view-passwordreset .modal.video-modal, .view-register .leanModal_box.video-modal, .view-register .modal.video-modal, body .leanModal_box.video-modal, body .modal.video-modal {
-		width: 970px;
-	}
-}
-@media (min-width: 768px){
-.view-login .leanModal_box.video-modal, .view-login .modal.video-modal, .view-passwordreset .leanModal_box.video-modal, .view-passwordreset .modal.video-modal, .view-register .leanModal_box.video-modal, .view-register .modal.video-modal, body .leanModal_box.video-modal, body .modal.video-modal {
-    	width: 750px;
-	}
-}
 .view-login .leanModal_box.video-modal, .view-login .modal.video-modal, .view-passwordreset .leanModal_box.video-modal, .view-passwordreset .modal.video-modal, .view-register .leanModal_box.video-modal, .view-register .modal.video-modal, body .leanModal_box.video-modal, body .modal.video-modal {
     width: auto;
     height: auto;
@@ -198,6 +183,22 @@ from openedx.core.djangolib.markup import HTML, Text
     position: absolute;
     left: 0;
     top: 0;
+}
+
+@media (min-width: 768px){
+.view-login .leanModal_box.video-modal, .view-login .modal.video-modal, .view-passwordreset .leanModal_box.video-modal, .view-passwordreset .modal.video-modal, .view-register .leanModal_box.video-modal, .view-register .modal.video-modal, body .leanModal_box.video-modal, body .modal.video-modal {
+    	width: 750px;
+	}
+}
+@media (min-width: 992px){
+.view-login .leanModal_box.video-modal, .view-login .modal.video-modal, .view-passwordreset .leanModal_box.video-modal, .view-passwordreset .modal.video-modal, .view-register .leanModal_box.video-modal, .view-register .modal.video-modal, body .leanModal_box.video-modal, body .modal.video-modal {
+		width: 970px;
+	}
+}
+@media (min-width:1200px){
+	.view-login .leanModal_box.video-modal,.view-login .modal.video-modal,.view-passwordreset .leanModal_box.video-modal,.view-passwordreset .modal.video-modal,.view-register .leanModal_box.video-modal,.view-register .modal.video-modal,body .leanModal_box.video-modal,body .modal.video-modal{
+		width:1170px
+	}
 }
 .cursos_online {
 	background-color: #FFF;
