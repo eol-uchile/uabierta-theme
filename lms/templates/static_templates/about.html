@@ -5,72 +5,180 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 <style>
-.title {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 42px;
-    text-align: center;
 
-    color: #2F80ED;
+.static-container {
+    margin: 0 auto 0;
+    max-width: 1200px;
+    padding: 60px 0 120px;
+    width: 100%;
 }
-
-.about-block {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 32px;
+.content-wrapper>.static-container {
+    width: auto;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: 0;
+    max-width: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 40px;
+    line-height: 2.3em;
+}
+@media (min-width: 768px){
+    .content-wrapper>.static-container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px){
+    .content-wrapper>.static-container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px){
+    .content-wrapper>.static-container {
+        width: 1170px;
+    }
+}
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .content-wrapper .container:after, .content-wrapper .container:before, .content-wrapper .container>.discussion-body:after, .content-wrapper .container>.discussion-body:before, .content-wrapper .course-material:after, .content-wrapper .course-material:before, .content-wrapper section.course-info header.course-profile .intro-inner-wrapper:after, .content-wrapper section.course-info header.course-profile .intro-inner-wrapper:before, .content-wrapper>.activation:after, .content-wrapper>.activation:before, .content-wrapper>.book-wrapper:after, .content-wrapper>.book-wrapper:before, .content-wrapper>.dashboard:after, .content-wrapper>.dashboard:before, .content-wrapper>.find-courses .container:after, .content-wrapper>.find-courses .container:before, .content-wrapper>.home .container:after, .content-wrapper>.home .container:before, .content-wrapper>.home>header .outer-wrapper:after, .content-wrapper>.home>header .outer-wrapper:before, .content-wrapper>.introduction:after, .content-wrapper>.introduction:before, .content-wrapper>.login:after, .content-wrapper>.login:before, .content-wrapper>.outside-app:after, .content-wrapper>.outside-app:before, .content-wrapper>.passwordreset:after, .content-wrapper>.passwordreset:before, .content-wrapper>.register:after, .content-wrapper>.register:before, .content-wrapper>.static-container:after, .content-wrapper>.static-container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .uchile-container-modal:after, .uchile-container-modal:before, .uchile-container:after, .uchile-container:before, .modal-footer:after, .modal-footer:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before, .view-login .leanModal_box.video-modal:after, .view-login .leanModal_box.video-modal:before, .view-login .modal.video-modal:after, .view-login .modal.video-modal:before, .view-login footer .footer-container:after, .view-login footer .footer-container:before, .view-login header.global-new:after, .view-login header.global-new:before, .view-login header.global-new>nav:after, .view-login header.global-new>nav:before, .view-login header.global.slim:after, .view-login header.global.slim:before, .view-login header.global.slim>nav:after, .view-login header.global.slim>nav:before, .view-login header.global:after, .view-login header.global:before, .view-login header.global>nav:after, .view-login header.global>nav:before, .view-passwordreset .leanModal_box.video-modal:after, .view-passwordreset .leanModal_box.video-modal:before, .view-passwordreset .modal.video-modal:after, .view-passwordreset .modal.video-modal:before, .view-passwordreset footer .footer-container:after, .view-passwordreset footer .footer-container:before, .view-passwordreset header.global-new:after, .view-passwordreset header.global-new:before, .view-passwordreset header.global-new>nav:after, .view-passwordreset header.global-new>nav:before, .view-passwordreset header.global.slim:after, .view-passwordreset header.global.slim:before, .view-passwordreset header.global.slim>nav:after, .view-passwordreset header.global.slim>nav:before, .view-passwordreset header.global:after, .view-passwordreset header.global:before, .view-passwordreset header.global>nav:after, .view-passwordreset header.global>nav:before, .view-register .leanModal_box.video-modal:after, .view-register .leanModal_box.video-modal:before, .view-register .modal.video-modal:after, .view-register .modal.video-modal:before, .view-register footer .footer-container:after, .view-register footer .footer-container:before, .view-register header.global-new:after, .view-register header.global-new:before, .view-register header.global-new>nav:after, .view-register header.global-new>nav:before, .view-register header.global.slim:after, .view-register header.global.slim:before, .view-register header.global.slim>nav:after, .view-register header.global.slim>nav:before, .view-register header.global:after, .view-register header.global:before, .view-register header.global>nav:after, .view-register header.global>nav:before, body .leanModal_box.video-modal:after, body .leanModal_box.video-modal:before, body .modal.video-modal:after, body .modal.video-modal:before, body footer .footer-container:after, body footer .footer-container:before, body header.global-new:after, body header.global-new:before, body header.global-new>nav:after, body header.global-new>nav:before, body header.global.slim:after, body header.global.slim:before, body header.global.slim>nav:after, body header.global.slim>nav:before, body header.global:after, body header.global:before, body header.global>nav:after, body header.global>nav:before {
+    content: " ";
+    display: table;
+}
+.content-wrapper>.static-container h1 {
+    font-family: inherit;
+    line-height: 1.3em;
+    margin-top: 0;
+    text-align: left;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    color: inherit;
+    font-weight: 500;
+    -webkit-font-smoothing: auto;
+    font-size: 32px;
+}
+p {
     text-align: justify;
 }
-
-.image-margin {
-    margin: 20px;
-    margin-left: 70px;
-    display: inline-block;
-    width: 10%;
-    top: 50%;
+.content-wrapper>.static-container b, .content-wrapper>.static-container strong {
+    font-weight: 600;
 }
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 240px;
+.static-container ol, .static-container ul {
+    margin-top: 0;
+    margin-bottom: 13px;
+    font: inherit;
+    color: inherit;
+    list-style-position: inside;
+    padding-left: 0
+}
+.static-container ol, .static-container ul {
+    list-style: disc;
+}
+.content-wrapper>.static-container ol, .content-wrapper>.static-container ul {
+    list-style-position: inside;
+}
+.content-wrapper>.static-container ol li, .content-wrapper>.static-container ul li {
+    font: inherit;
+    color: inherit;
+}
+.btn-group-vertical>.btn-group:after, .btn-toolbar:after, .clearfix:after, .container-fluid:after, .container:after, .content-wrapper .container:after, .content-wrapper .container>.discussion-body:after, .content-wrapper .course-material:after, .content-wrapper section.course-info header.course-profile .intro-inner-wrapper:after, .content-wrapper>.activation:after, .content-wrapper>.book-wrapper:after, .content-wrapper>.dashboard:after, .content-wrapper>.find-courses .container:after, .content-wrapper>.home .container:after, .content-wrapper>.home>header .outer-wrapper:after, .content-wrapper>.introduction:after, .content-wrapper>.login:after, .content-wrapper>.outside-app:after, .content-wrapper>.passwordreset:after, .content-wrapper>.register:after, .content-wrapper>.static-container:after, .dl-horizontal dd:after, .form-horizontal .form-group:after, .uchile-container-modal:after, .uchile-container:after, .modal-footer:after, .nav:after, .navbar-collapse:after, .navbar-header:after, .navbar:after, .pager:after, .panel-body:after, .row:after, .view-login .leanModal_box.video-modal:after, .view-login .modal.video-modal:after, .view-login footer .footer-container:after, .view-login header.global-new:after, .view-login header.global-new>nav:after, .view-login header.global.slim:after, .view-login header.global.slim>nav:after, .view-login header.global:after, .view-login header.global>nav:after, .view-passwordreset .leanModal_box.video-modal:after, .view-passwordreset .modal.video-modal:after, .view-passwordreset footer .footer-container:after, .view-passwordreset header.global-new:after, .view-passwordreset header.global-new>nav:after, .view-passwordreset header.global.slim:after, .view-passwordreset header.global.slim>nav:after, .view-passwordreset header.global:after, .view-passwordreset header.global>nav:after, .view-register .leanModal_box.video-modal:after, .view-register .modal.video-modal:after, .view-register footer .footer-container:after, .view-register header.global-new:after, .view-register header.global-new>nav:after, .view-register header.global.slim:after, .view-register header.global.slim>nav:after, .view-register header.global:after, .view-register header.global>nav:after, body .leanModal_box.video-modal:after, body .modal.video-modal:after, body footer .footer-container:after, body header.global-new:after, body header.global-new>nav:after, body header.global.slim:after, body header.global.slim>nav:after, body header.global:after, body header.global>nav:after {
+    clear: both;
+}
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .content-wrapper .container:after, .content-wrapper .container:before, .content-wrapper .container>.discussion-body:after, .content-wrapper .container>.discussion-body:before, .content-wrapper .course-material:after, .content-wrapper .course-material:before, .content-wrapper section.course-info header.course-profile .intro-inner-wrapper:after, .content-wrapper section.course-info header.course-profile .intro-inner-wrapper:before, .content-wrapper>.activation:after, .content-wrapper>.activation:before, .content-wrapper>.book-wrapper:after, .content-wrapper>.book-wrapper:before, .content-wrapper>.dashboard:after, .content-wrapper>.dashboard:before, .content-wrapper>.find-courses .container:after, .content-wrapper>.find-courses .container:before, .content-wrapper>.home .container:after, .content-wrapper>.home .container:before, .content-wrapper>.home>header .outer-wrapper:after, .content-wrapper>.home>header .outer-wrapper:before, .content-wrapper>.introduction:after, .content-wrapper>.introduction:before, .content-wrapper>.login:after, .content-wrapper>.login:before, .content-wrapper>.outside-app:after, .content-wrapper>.outside-app:before, .content-wrapper>.passwordreset:after, .content-wrapper>.passwordreset:before, .content-wrapper>.register:after, .content-wrapper>.register:before, .content-wrapper>.static-container:after, .content-wrapper>.static-container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .uchile-container-modal:after, .uchile-container-modal:before, .uchile-container:after, .uchile-container:before, .modal-footer:after, .modal-footer:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before, .view-login .leanModal_box.video-modal:after, .view-login .leanModal_box.video-modal:before, .view-login .modal.video-modal:after, .view-login .modal.video-modal:before, .view-login footer .footer-container:after, .view-login footer .footer-container:before, .view-login header.global-new:after, .view-login header.global-new:before, .view-login header.global-new>nav:after, .view-login header.global-new>nav:before, .view-login header.global.slim:after, .view-login header.global.slim:before, .view-login header.global.slim>nav:after, .view-login header.global.slim>nav:before, .view-login header.global:after, .view-login header.global:before, .view-login header.global>nav:after, .view-login header.global>nav:before, .view-passwordreset .leanModal_box.video-modal:after, .view-passwordreset .leanModal_box.video-modal:before, .view-passwordreset .modal.video-modal:after, .view-passwordreset .modal.video-modal:before, .view-passwordreset footer .footer-container:after, .view-passwordreset footer .footer-container:before, .view-passwordreset header.global-new:after, .view-passwordreset header.global-new:before, .view-passwordreset header.global-new>nav:after, .view-passwordreset header.global-new>nav:before, .view-passwordreset header.global.slim:after, .view-passwordreset header.global.slim:before, .view-passwordreset header.global.slim>nav:after, .view-passwordreset header.global.slim>nav:before, .view-passwordreset header.global:after, .view-passwordreset header.global:before, .view-passwordreset header.global>nav:after, .view-passwordreset header.global>nav:before, .view-register .leanModal_box.video-modal:after, .view-register .leanModal_box.video-modal:before, .view-register .modal.video-modal:after, .view-register .modal.video-modal:before, .view-register footer .footer-container:after, .view-register footer .footer-container:before, .view-register header.global-new:after, .view-register header.global-new:before, .view-register header.global-new>nav:after, .view-register header.global-new>nav:before, .view-register header.global.slim:after, .view-register header.global.slim:before, .view-register header.global.slim>nav:after, .view-register header.global.slim>nav:before, .view-register header.global:after, .view-register header.global:before, .view-register header.global>nav:after, .view-register header.global>nav:before, body .leanModal_box.video-modal:after, body .leanModal_box.video-modal:before, body .modal.video-modal:after, body .modal.video-modal:before, body footer .footer-container:after, body footer .footer-container:before, body header.global-new:after, body header.global-new:before, body header.global-new>nav:after, body header.global-new>nav:before, body header.global.slim:after, body header.global.slim:before, body header.global.slim>nav:after, body header.global.slim>nav:before, body header.global:after, body header.global:before, body header.global>nav:after, body header.global>nav:before {
+    content: " ";
+    display: table;
 }
 </style>
 
+<section class="static-container about">
+    <h1>${_("UAbierta")}</h1>
+    <p>
+        UAbierta, plataforma de cursos abiertos y en línea de la Universidad de Chile,
+        surge para expandir y democratizar el acceso al conocimiento, ofreciendo
+        ooportunidades formativas a quienes deseen aprender de forma gratuita. 
+        <strong>No hay requisitos de estudios previos para acceder a los cursos</strong>,
+        proyectándose así el compromiso histórico de la Universidad con la educación pública de calidad,
+        más allá de sus fronteras y prácticas tradicionales.
+    <br>
+    <br>
+    
+    El proyecto, también, representa nuestra voluntad de explorar y aprovechar las
+    nuevas tecnologías educativas desde un enfoque de innovación pedagógica. Se plantea
+    como un modelo de trabajo de extensión universitaria y vinculación con el medio,
+    ligado estrechamente con la investigación y creación académica.
+    
+    <br>
+    <br>
+    
+    La plataforma nació en 2015, impulsada por la
+        <a href="http://www.uchile.cl/iniciativaJGM"> Iniciativa Bicentenario</a> (IBJGM), proyecto institucional de la Universidad de Chile financiado con fondos
+    públicos, que está orientado a la revitalización de las Humanidades, Ciencias Sociales,
+    Artes y Comunicación.
+    
+    <br>
+    <br>
+    
+    Los cursos de UAbierta se realizan con la participación de destacados académicos
+    y académicas; así como, profesionales provenientes de las distintas facultades de
+    la Universidad de Chile, contando con el apoyo de la Vicerrectoría de Extensión y
+    Comunicaciones de nuestra casa de estudios.
+    
+    <br>
+    <br>
+    
+    UAbierta se desarrolla sobre <a href="https://open.edx.org/">OpenEDX</a>, plataforma de aprendizaje en línea de
+    código abierto de EDX, un consorcio de universidades y entidades educativas
+    lideradas por la Universidad de Harvard y el Instituto de Tecnología de
+    Massachusetts (MIT); cuyo propósito es impulsar la investigación y la innovación
+    tecnológica, al servicio del mejoramiento de la calidad de la educación superior.
+    <br>
+    <br>
+    Desde 2018, el Instituto de la Comunicación e Imagen y la Facultad de Ciencias
+    Sociales de la Universidad de Chile potencian y posibilitan la concreción de los
+    objetivos de UAbierta, mediante la producción y ejecución de nuevos cursos, con
+    excelentes resultados.
+    <br>
+    <br>
+    <strong>Coordinación General:</strong>
+    <ul>
+        <li>María Elena Acuña M. Directora de Extensión de la Facultad de Ciencias Sociales	</li>
+    </ul>
+    <br>
+    
+    <strong>Coordinación General:</strong>
+    <ul>
+    <li>	Secretaria  Ejecutiva : Alejandra Cornejo	</li>
+    <li>	Secretario Técnico: Bran Montiel	</li>
+    <li>	Coordinación Operativa: Ricardo Madrid F.	</li>
+    
+    </ul>
+    
+    <br>
+    
+    <strong>Coordinación General:</strong>
+    
+    <ul>
+    <li> Ximena Póo, Directora de Extensión, VEXCOM Universidad de Chile	</li>
+    <li> Fernando Gaspar, Director de Creación Artística	</li>
+    <li> Paola Jirón, académica Facultad de Arquitectura y Urbanismo	</li>
+    <li> José Miguel Labrín, académico Instituto de la Comunicación e Imagen	</li>
+    <li> Carolina Gutiérrez, Proyecto Asociativo Regional Explora de CONICYT RM Sur Oriente, Facultad de Ciencias Veterinarias y Pecuarias 	</li>
+    <li> Camilo Morales, Coordinador Programa Interdisciplinario en Infancias, Facultad de Ciencias Sociales	</li>
+    </ul>
+    
+    <br>
+    
+    <strong>Coordinación General:</strong>
+    <ul>
+    <li>	Megatutoría y mesa de soporte: Silvia Carozzi V. y Raúl Domenech C.	</li>
+    <li>	 Coordinación informática: Elías Estay	</li>
+    <li>	 Diseño Gráfico: Gonzalo Contreras	</li>
+    <li>	 Difusión Ricardo Madrid F.	</li>
+    </ul>
+    <br>
+    Consultas: <a href="mailto:soporte.uabierta@u.uchile.cl" target="_blank">soporte.uabierta@u.uchile.cl</a>
+    <br>
+    Contacto de prensa: <a href="mailto:ricardo.madrid@ug.uchile.cl" target="_blank">ricardo.madrid@ug.uchile.cl</a>
+    
+    </section>        
 
-<main id="main" aria-label="Content" tabindex="-1" class="static_pages">
-<h1 class="title">¿Qué es EduAbierta?</h1>
-
-<hr>
-
-<div class="container">
-    <div style="display: inline-block;width: 80%;">
-        <p class="about-block">
-                Eduabierta es una iniciativa desarrollada por el Programa Transversal de Educación de la Universidad de Chile. Este programa colabora en la vinculación y articulación de las unidades académicas y diversas iniciativas que han surgido en la Universidad en torno a la educación y a las pedagogías. Su labor busca facilitar las relaciones Inter facultades y el trabajo inter y transdisciplinario. Es en este contexto, que se abre este espacio formativo masivo, abiertos a la comunidad nacional e internacional, en línea 100% (conocidos como MOOCs, por sus siglas en inglés) y que cuentan con el aval de la excelencia académica y el prestigio de una universidad estatal y con vocación de servicio público, como es la Universidad de Chile.
-        </p>
-    </div>
-    <div class="image-margin">
-        <img src="/static/eduabierta/images/eduabierta.svg">&emsp;
-    </div>
-</div>
-
-<div class="container">
-    <p class="about-block"> 
-    Sus objetivos fundamentales son desarrollar un modelo de apertura y gestión del conocimiento y el patrimonio educativo de la Universidad de Chile y promover la construcción de redes de colaboración con otras universidades del Estado, a fin de contribuir al fortalecimiento de la educación pública; dinamizar y favorecer el proceso de acceso a la formación digital a la ciudadanía en general en el marco de una concepción de educación permanente; y finalmente, impulsar la promoción de una cultura de innovación pedagógica en torno a temáticas actuales, relevantes y pertinentes a las necesidades de las comunidades.
-    </p>
-</div>
-
-<div class="container">
-    <img class="center" src="/static/eduabierta/images/openedx.svg" >
-</div>
-
-<div class="container">
-    <p class="about-block">
-        La plataforma EduAbierta utiliza la tecnología instruccional de Open edX, de código abierto (open source), capaz de soportar y gestionar a gran escala cursos abiertos, masivos y en línea. Cada curso que se abre al mundo cuenta con el aporte de académicos y académicas de la Universidad de Chile y con el apoyo de profesionales para elaborar el diseño audiovisual e instrucción, siguiendo un modelo formativo centrado en la autonomía del estudiante; la pertinencia y universalidad de las temáticas tratadas; la colaboración de los participantes en instancias de construcción de conocimiento compartido y la utilización de recursos educativos audiovisuales y digitales.
-    </p>
-</div>
-</main>

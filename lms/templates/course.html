@@ -42,11 +42,39 @@ now = timezone.now()
           <span class="university">Universidad_de_Chile</span>           
         <% 
           if course.start is not None:
-              course_date_string = course.start.strftime('%d %b %Y') 
+              month = course.start.strftime('%m')
+              day = course.start.strftime('%d')
+              year = course.start.strftime('%Y')
+              aux_month = "Enero"
+              if month == "02":
+                aux_month = "Feb"
+              elif month == "03":
+                aux_month = "Marzo"
+              elif month == "04":
+                aux_month = "Abril"
+              elif month == "05":
+                aux_month = "Mayo"
+              elif month == "06":
+                aux_month = "Junio"
+              elif month == "07":
+                aux_month = "Julio"
+              elif month == "08":
+                aux_month = "Agos"
+              elif month == "09":
+                aux_month = "Sept"
+              elif month == "10":
+                aux_month = "Oct"
+              elif month == "11":
+                aux_month = "Nov"
+              elif month == "12":
+                aux_month = "Dic"
+              endif
           else:
-              course_date_string = ''
+            aux_month = ""
+            day = ""
+            year = ""
         %>        
-        <span class="start-date">${course_date_string}</span>           
+        <span class="start-date">${day} ${aux_month} ${year}</span>           
         </div>
       </section>
       <div class="meta-info">

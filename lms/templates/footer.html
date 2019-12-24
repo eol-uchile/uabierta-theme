@@ -8,234 +8,201 @@
 %>
 <% footer = get_footer(is_secure=is_secure) %>
 <%namespace name='static' file='static_content.html'/>
-
 <style>
-.footer-openedx-ba {
-  background: linear-gradient(180deg, #F2F2F2 0%, rgba(242, 242, 242, 0) 100%);
-  box-shadow: none;
-  border-top: none;
+.view-login footer, .view-passwordreset footer, .view-register footer, body footer {
+    background-color: #fff;
+    color: #00aff0;
+    padding: 30px 0;
+    font-size: .9em;
+    overflow: hidden;
 }
-
-.copyright-center {
-  text-align: center !important;
-  margin: -2px 0 8px 0 !important;
-  font-size: 0.6875em !important;
-  color: #767676 !important;
+.view-login footer .footer-container, .view-passwordreset footer .footer-container, .view-register footer .footer-container, body footer .footer-container {
+    width: auto;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: 0;
+    max-width: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
 }
-
-.logo-properties {
-  mix-blend-mode: multiply;
-}
-
-.wrapper-logo {
-  display: flex;
-  margin-bottom: 20px;
-}
-
-.logo-container {
-  display: flex;
-  justify-content: space-between;
-  width:100%
-}
-
-.helpdesk-footer {
-  text-align: center;
-  font-family: "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  color: #767676 !important
-}
-
-.helpdesk-footer-href {
-	text-decoration: underline !important;
-	color: #767676 !important;
-	font-weight: bold;
-}
-
-@media (max-width: 995px) {
-  .logo-properties {
-    display: block !important;
-    margin: 0 auto;
+@media (min-width: 768px){
+  .view-login footer .footer-container, .view-passwordreset footer .footer-container, .view-register footer .footer-container, body footer .footer-container {
+      width: 750px;
   }
-
-  .logo-container {
-    display: block;
-    justify-content: space-between;
-    width:100%
+}
+@media (min-width: 992px){
+  .view-login footer .footer-container, .view-passwordreset footer .footer-container, .view-register footer .footer-container, body footer .footer-container {
+      width: 970px;
   }
+}
+@media (min-width: 1200px){
+  .view-login footer .footer-container, .view-passwordreset footer .footer-container, .view-register footer .footer-container, body footer .footer-container {
+      width: 1170px;
+  }
+}
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .content-wrapper .container:after, .content-wrapper .container:before, .content-wrapper .container>.discussion-body:after, .content-wrapper .container>.discussion-body:before, .content-wrapper .course-material:after, .content-wrapper .course-material:before, .content-wrapper section.course-info header.course-profile .intro-inner-wrapper:after, .content-wrapper section.course-info header.course-profile .intro-inner-wrapper:before, .content-wrapper>.activation:after, .content-wrapper>.activation:before, .content-wrapper>.book-wrapper:after, .content-wrapper>.book-wrapper:before, .content-wrapper>.dashboard:after, .content-wrapper>.dashboard:before, .content-wrapper>.find-courses .container:after, .content-wrapper>.find-courses .container:before, .content-wrapper>.home .container:after, .content-wrapper>.home .container:before, .content-wrapper>.home>header .outer-wrapper:after, .content-wrapper>.home>header .outer-wrapper:before, .content-wrapper>.introduction:after, .content-wrapper>.introduction:before, .content-wrapper>.login:after, .content-wrapper>.login:before, .content-wrapper>.outside-app:after, .content-wrapper>.outside-app:before, .content-wrapper>.passwordreset:after, .content-wrapper>.passwordreset:before, .content-wrapper>.register:after, .content-wrapper>.register:before, .content-wrapper>.static-container:after, .content-wrapper>.static-container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .uchile-container-modal:after, .uchile-container-modal:before, .uchile-container:after, .uchile-container:before, .modal-footer:after, .modal-footer:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before, .view-login .leanModal_box.video-modal:after, .view-login .leanModal_box.video-modal:before, .view-login .modal.video-modal:after, .view-login .modal.video-modal:before, .view-login footer .footer-container:after, .view-login footer .footer-container:before, .view-login header.global-new:after, .view-login header.global-new:before, .view-login header.global-new>nav:after, .view-login header.global-new>nav:before, .view-login header.global.slim:after, .view-login header.global.slim:before, .view-login header.global.slim>nav:after, .view-login header.global.slim>nav:before, .view-login header.global:after, .view-login header.global:before, .view-login header.global>nav:after, .view-login header.global>nav:before, .view-passwordreset .leanModal_box.video-modal:after, .view-passwordreset .leanModal_box.video-modal:before, .view-passwordreset .modal.video-modal:after, .view-passwordreset .modal.video-modal:before, .view-passwordreset footer .footer-container:after, .view-passwordreset footer .footer-container:before, .view-passwordreset header.global-new:after, .view-passwordreset header.global-new:before, .view-passwordreset header.global-new>nav:after, .view-passwordreset header.global-new>nav:before, .view-passwordreset header.global.slim:after, .view-passwordreset header.global.slim:before, .view-passwordreset header.global.slim>nav:after, .view-passwordreset header.global.slim>nav:before, .view-passwordreset header.global:after, .view-passwordreset header.global:before, .view-passwordreset header.global>nav:after, .view-passwordreset header.global>nav:before, .view-register .leanModal_box.video-modal:after, .view-register .leanModal_box.video-modal:before, .view-register .modal.video-modal:after, .view-register .modal.video-modal:before, .view-register footer .footer-container:after, .view-register footer .footer-container:before, .view-register header.global-new:after, .view-register header.global-new:before, .view-register header.global-new>nav:after, .view-register header.global-new>nav:before, .view-register header.global.slim:after, .view-register header.global.slim:before, .view-register header.global.slim>nav:after, .view-register header.global.slim>nav:before, .view-register header.global:after, .view-register header.global:before, .view-register header.global>nav:after, .view-register header.global>nav:before, body .leanModal_box.video-modal:after, body .leanModal_box.video-modal:before, body .modal.video-modal:after, body .modal.video-modal:before, body footer .footer-container:after, body footer .footer-container:before, body header.global-new:after, body header.global-new:before, body header.global-new>nav:after, body header.global-new>nav:before, body header.global.slim:after, body header.global.slim:before, body header.global.slim>nav:after, body header.global.slim>nav:before, body header.global:after, body header.global:before, body header.global>nav:after, body header.global>nav:before {
+    content: " ";
+    display: table;
+}
+.btn-group-vertical>.btn-group:after, .btn-toolbar:after, .clearfix:after, .container-fluid:after, .container:after, .content-wrapper .container:after, .content-wrapper .container>.discussion-body:after, .content-wrapper .course-material:after, .content-wrapper section.course-info header.course-profile .intro-inner-wrapper:after, .content-wrapper>.activation:after, .content-wrapper>.book-wrapper:after, .content-wrapper>.dashboard:after, .content-wrapper>.find-courses .container:after, .content-wrapper>.home .container:after, .content-wrapper>.home>header .outer-wrapper:after, .content-wrapper>.introduction:after, .content-wrapper>.login:after, .content-wrapper>.outside-app:after, .content-wrapper>.passwordreset:after, .content-wrapper>.register:after, .content-wrapper>.static-container:after, .dl-horizontal dd:after, .form-horizontal .form-group:after, .uchile-container-modal:after, .uchile-container:after, .modal-footer:after, .nav:after, .navbar-collapse:after, .navbar-header:after, .navbar:after, .pager:after, .panel-body:after, .row:after, .view-login .leanModal_box.video-modal:after, .view-login .modal.video-modal:after, .view-login footer .footer-container:after, .view-login header.global-new:after, .view-login header.global-new>nav:after, .view-login header.global.slim:after, .view-login header.global.slim>nav:after, .view-login header.global:after, .view-login header.global>nav:after, .view-passwordreset .leanModal_box.video-modal:after, .view-passwordreset .modal.video-modal:after, .view-passwordreset footer .footer-container:after, .view-passwordreset header.global-new:after, .view-passwordreset header.global-new>nav:after, .view-passwordreset header.global.slim:after, .view-passwordreset header.global.slim>nav:after, .view-passwordreset header.global:after, .view-passwordreset header.global>nav:after, .view-register .leanModal_box.video-modal:after, .view-register .modal.video-modal:after, .view-register footer .footer-container:after, .view-register header.global-new:after, .view-register header.global-new>nav:after, .view-register header.global.slim:after, .view-register header.global.slim>nav:after, .view-register header.global:after, .view-register header.global>nav:after, body .leanModal_box.video-modal:after, body .modal.video-modal:after, body footer .footer-container:after, body header.global-new:after, body header.global-new>nav:after, body header.global.slim:after, body header.global.slim>nav:after, body header.global:after, body header.global>nav:after {
+    clear: both;
+}
+.view-login footer .footer-container p:last-child, .view-passwordreset footer .footer-container p:last-child, .view-register footer .footer-container p:last-child, body footer .footer-container p:last-child {
+    margin-bottom: 0;
+}
+body footer .footer-container p {
+    color: inherit;
+    font: inherit;
+    margin: 0 0 1em;
+    text-align: justify;
+}
+.view-login footer .footer-container a, .view-login footer .footer-container a:hover, .view-login footer .footer-container a:link, .view-login footer .footer-container a:link:hover, .view-login footer .footer-container a:visited, .view-login footer .footer-container a:visited:hover, .view-passwordreset footer .footer-container a, .view-passwordreset footer .footer-container a:hover, .view-passwordreset footer .footer-container a:link, .view-passwordreset footer .footer-container a:link:hover, .view-passwordreset footer .footer-container a:visited, .view-passwordreset footer .footer-container a:visited:hover, .view-register footer .footer-container a, .view-register footer .footer-container a:hover, .view-register footer .footer-container a:link, .view-register footer .footer-container a:link:hover, .view-register footer .footer-container a:visited, .view-register footer .footer-container a:visited:hover, body footer .footer-container a, body footer .footer-container a:hover, body footer .footer-container a:link, body footer .footer-container a:link:hover, body footer .footer-container a:visited, body footer .footer-container a:visited:hover {
+    color: inherit;
+}
+body footer .footer-container b, body footer .footer-container strong {
+    font-weight: 600;
+}
+nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+}
+.view-login footer .footer-container nav ul li, .view-passwordreset footer .footer-container nav ul li, .view-register footer .footer-container nav ul li, body footer .footer-container nav ul li {
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+.view-login footer .footer-container nav ul li:after, .view-passwordreset footer .footer-container nav ul li:after, .view-register footer .footer-container nav ul li:after, body footer .footer-container nav ul li:after {
+    content: '|';
+    padding: 0 0 0 5px;
+}
+.view-login footer .footer-container nav ul li:last-child, .view-passwordreset footer .footer-container nav ul li:last-child, .view-register footer .footer-container nav ul li:last-child, body footer .footer-container nav ul li:last-child {
+    margin: 0;
+}
+.view-login footer .footer-container nav ul li:last-child::after, .view-passwordreset footer .footer-container nav ul li:last-child::after, .view-register footer .footer-container nav ul li:last-child::after, body footer .footer-container nav ul li:last-child::after {
+    content: '';
+    padding: 0 0 0 5px;
+}
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    margin-left: -5px;
+}
+.list-inline>li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.social-item {
+    list-style: none;
+}
+.view-login footer .footer-container i.fa, .view-passwordreset footer .footer-container i.fa, .view-register footer .footer-container i.fa, body footer .footer-container i.fa {
+    margin-right: 5px;
+}
+.view-login footer .footer-container .by-uchile, .view-passwordreset footer .footer-container .by-uchile, .view-register footer .footer-container .by-uchile, body footer .footer-container .by-uchile {
+    float: right!important;
+    float: right;
 }
 </style>
+<footer>
+  <div class="footer-container">
+      <center>
+      <div name="menu-inferior">
+        <img src="http://www.uabierta.uchile.cl/static/themes/uchile/images/portada/logo_pie_1.fc6cc3b6dd65.jpg"/>
+        <img src="http://www.uabierta.uchile.cl/static/themes/uchile/images/portada/logo_pie_2.50767cf0f3aa.jpg"/>
+        <img src="http://www.uabierta.uchile.cl/static/themes/uchile/images/portada/logo_pie_4.a2b9c4f0ccee.jpg"/>
 
-% if uses_bootstrap and False:
-  <div class="container-fluid wrapper-footer">
-    <footer>
-      <div class="row">
-        <div class="col-md-9">
-          ##<nav class="navbar site-nav navbar-expand-sm" aria-label="${_('About')}">
-          ##  <ul class="navbar-nav">
-          ##    % for item_num, link in enumerate(footer['navigation_links'], start=1):
-          ##      <li class="nav-item">
-          ##        <a class="nav-link" href="${link['url']}">${link['title']}</a>
-          ##      </li>
-          ##    % endfor
-          ##  </ul>
-          ##</nav>
-          <div class="wrapper-logo">
-              <div class="container logo-container">
-                <img class="logo-properties" src="${static.url('eduabierta/images/logos/facso.svg')}"/>
-                <img class="logo-properties" src="${static.url('eduabierta/images/logos/logo-50.png')}"/>
-                <img class="logo-properties" src="${static.url('eduabierta/images/logos/ffh.svg')}"/>
-                <img class="logo-properties" src="${static.url('eduabierta/images/logos/ciae.svg')}"/>
-                <img class="logo-properties" src="${static.url('eduabierta/images/logos/openedx.svg')}"/>
-              </div>
-          ##<p>
-            ##<a href="/">
-            ##  ## The default logo is a placeholder.
-              ## You can either replace this link entirely or update
-              ## the FOOTER_ORGANIZATION_IMAGE in Django settings.
-              ## If you customize FOOTER_ORGANIZATION_IMAGE, then the image
-              ## can be included in the footer on other sites
-              ## (e.g. a blog or marketing front-end) to provide a consistent
-              ## user experience.  See the branding app for details.
-            ##  <img alt="organization logo" src="${footer['logo_image']}">
-            ##</a>
-          ##</p>
+         <p>&nbsp;</p>
         </div>
-
-          ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
-          <p class="copyright">${footer['copyright']} ${u" | {icp}".format(icp=getattr(settings,'ICP_LICENSE')) if getattr(settings,'ICP_LICENSE',False) else ""}</p>
-          <p class="copyright"><a href="/honor">TÉRMINOS DE USO</href></p>
-          
-
-          ##<nav class="navbar legal-nav navbar-expand-sm" aria-label="${_('Legal')}">
-          ##  <ul class="navbar-nav">
-          ##    % for item_num, link in enumerate(footer['legal_links'], start=1):
-          ##      <li class="nav-item">
-          ##        <a class="nav-link" href="${link['url']}">${link['title']}</a>
-          ##      </li>
-          ##    % endfor
-          ##    <li class="nav-item">
-          ##      <a class="nav-link" href="${footer['edx_org_link']['url']}">${footer['edx_org_link']['text']}</a>
-          ##    </li>
-          ##  </ul>
-          ##</nav>
-        </div>
-        <div class="col-md-3">
-          ## Please leave this link and use one of the logos provided
-          ## The OpenEdX link may be hidden when this view is served
-          ## through an API to partner sites (such as marketing sites or blogs),
-          ## which are not technically powered by Open edX.
-          % if not hide_openedx_link:
-            ##<div class="footer-about-openedx">
-            ##  <p>
-		        ##      <a href="http://www.uchile.cl/dsti" target="_blank">
-            ##      <img src="${static.url('eol-uchile/images/sti_openedx_logo.png')}" alt="" width="140" />
-            ##    </a>
-                ##<a href="${footer['openedx_link']['url']}">
-                ##  <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
-                ##</a>
-              </p>
-            </div>
-          % endif
-        </div>
+      </center>
       </div>
-    </footer>
-  </div>
-% else:
-  <div class="wrapper wrapper-footer footer-openedx-ba">
-    <footer id="footer-openedx" class="grid-container"
-      ## When rendering the footer through the branding API,
-      ## the direction may not be set on the parent element,
-      ## so we set it here.
-      % if bidi:
-        dir=${bidi}
-      % endif
-    >
-      <div class="">
-        <div class="helpdesk-footer">
-          PARA DUDAS Y/O CONSULTAS, COMUNÍQUESE CON LA
-          <a href="mailto:eduabierta@uchile.cl" class="helpdesk-footer-href" style="text-decoration: underline !important; font-weight: bold;">
-            MESA DE AYUDA
-          </a>.
-        </div>
-        ##<nav class="nav-colophon" aria-label="${_('About')}">
-        ##  <ol>
-        ##      % for item_num, link in enumerate(footer['navigation_links'], start=1):
-        ##      <li class="nav-colophon-0${item_num}">
-        ##        <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
-        ##      </li>
-        ##      % endfor
-        ##  </ol>
-        ##</nav>
+</footer>
 
-        % if context.get('include_language_selector', footer_language_selector_is_enabled()):
-            <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
-        % endif
+<footer style="background-color: #e4e4e4; color: #00aff0; border-bottom: 5px solid #00aff0;">
+  <div class="footer-container">
+      <div>
 
-        <div class="wrapper-logo">
-          <div class="container logo-container">
-            <img class="logo-properties" src="${static.url('eduabierta/images/logos/facso.svg')}"/>
-            <img class="logo-properties" src="${static.url('eduabierta/images/logos/logo-50.png')}"/>
-            <img class="logo-properties" src="${static.url('eduabierta/images/logos/ffh.svg')}"/>
-            <img class="logo-properties" src="${static.url('eduabierta/images/logos/ciae.svg')}"/>
-            <img class="logo-properties" src="${static.url('eduabierta/images/logos/openedx.svg')}"/>
+          <div  style="float: left; padding-bottom: 4px;">
+              <img src="http://www.uabierta.uchile.cl/static/themes/uchile/images/portada/logo_bajada_chico.2a6c02949f19.png"/>
+               <p class="copyright"> <a href="http://code.edx.org">  © Uabierta, Universidad de Chile, OpenEDX, 2015</a>
+
+      	</p>
+          </div>          
+          <div style="float: left; width: 75%;">
+              <p><b></b></p>
+              <nav style="">
+              <ul style="">
+                %if settings.MKTG_URL_LINK_MAP.get('ABOUT'):
+                <li style="">
+                  <a id="about" href="${marketing_link('ABOUT')}">${_("About")}</a>
+                </li>
+                %endif
+                %if settings.MKTG_URL_LINK_MAP.get('FAQ'):
+                <li style="">
+                  <a id="faq" href="${marketing_link('FAQ')}">${_("FAQ")}</a>
+                </li>
+                %endif
+                %if settings.MKTG_URL_LINK_MAP.get('CONTACT'):
+                <li style="">
+                  <a id="contact" href="${marketing_link('CONTACT')}">${_("Contact")}</a>
+                </li>
+                %endif
+                %if settings.MKTG_URL_LINK_MAP.get('TOS'):
+                <li style="">
+                  <a href="${marketing_link('TOS')}">${_(u"Términos de uso")}</a>
+                </li>
+                %endif
+                %if settings.MKTG_URL_LINK_MAP.get('HONOR'):
+                <li style="">
+                  <a href="${marketing_link('HONOR')}">${_(u"Código de honor")}</a>
+                </li>
+                %endif
+                ##%if settings.MKTG_URL_LINK_MAP.get('PRIVACY'):
+                ##<li style="">
+                ##  <a href="${marketing_link('PRIVACY')}">${_("Privacy Policy")}</a>
+                ##</li>
+                ##%endif
+                %if settings.MKTG_URL_LINK_MAP.get('AGENDA'):
+                <li style="">
+                  <a href="${marketing_link('AGENDA')}">${_("Agenda")}</a>
+                </li>
+                %endif
+                </ul>
+              </nav>
           </div>
-          ##<p>
-            ##<a href="/">
-            ##  ## The default logo is a placeholder.
-              ## You can either replace this link entirely or update
-              ## the FOOTER_ORGANIZATION_IMAGE in Django settings.
-              ## If you customize FOOTER_ORGANIZATION_IMAGE, then the image
-              ## can be included in the footer on other sites
-              ## (e.g. a blog or marketing front-end) to provide a consistent
-              ## user experience.  See the branding app for details.
-            ##  <img alt="organization logo" src="${footer['logo_image']}">
-            ##</a>
-          ##</p>
-        </div>
+          
+          <div style="float: right; width: 25%;margin-top: -25px;">
+              <p><b>Síguenos</b></p>
 
-        ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
-        <p class="copyright copyright-center">${footer['copyright']} ${u" | {icp}".format(icp=getattr(settings,'ICP_LICENSE')) if getattr(settings,'ICP_LICENSE',False) else ""}</p>
-        <p class="copyright copyright-center"><a href="/honor">TÉRMINOS DE USO</href></p>
+              <nav>
+                  <lu class="list-inline">
+                           <li class="social-item"><a href="https://www.facebook.com/UAbiertaUChile" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+                    </li>
+                    <li class="social-item"><a href="https://instagram.com/explore/tags/uabiertauchile/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+                    </li>
+                    <li class="social-item"><a href="https://www.youtube.com/channel/UCKr4gfL_MGbCDECDtPOGdXw?view_as=public" target="_blank"><i class="fa fa-youtube fa-lg"></i></a>
+                    </li>
+                    <li class="social-item"><a href="https://twitter.com/UAbiertaUchile" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+                    </li>
+                <lu>
+              </nav>
+          </div>
 
-        ##<nav class="nav-legal" aria-label="${_('Legal')}">
-        ##  <ul>
-        ##    % for item_num, link in enumerate(footer['legal_links'], start=1):
-        ##      <li class="nav-legal-0${item_num}">
-        ##        <a href="${link['url']}">${link['title']}</a>
-        ##      </li>
-        ##    % endfor
-        ##    <li><a href="${footer['edx_org_link']['url']}">${footer['edx_org_link']['text']}</a></li>
-         ## </ul>
-        ##</nav>
       </div>
+                   <p>&nbsp;</p>
 
-      ## Please leave this link and use one of the logos provided
-      ## The OpenEdX link may be hidden when this view is served
-      ## through an API to partner sites (such as marketing sites or blogs),
-      ## which are not technically powered by OpenEdX.
-      ##% if not hide_openedx_link:
-      ##<div class="footer-about-openedx">
-      ##  <p>
-	    ##    <a href="http://www.uchile.cl/dsti" target="_blank">
-      ##      <img src="${static.url('eol-uchile/images/sti_openedx_logo.png')}" alt="" width="140" />
-      ##    </a>
-          ##<a href="${footer['openedx_link']['url']}">
-          ##  <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
-          ##</a>
-      ##  </p>
-      ##</div>
-      ##% endif
-    </footer>
+    <div>
+             <p>&nbsp;</p>
+
+    </div>
+    <div class="by-uchile">
+      <a href="/"></a>
+    </div>
   </div>
-% endif
-% if include_dependencies:
-  <%static:js group='base_vendor'/>
-  <%static:css group='style-vendor'/>
-  <%include file="widgets/segment-io.html" />
-  <%include file="widgets/segment-io-footer.html" />
-% endif
-% if footer_css_urls:
-  % for url in footer_css_urls:
-    <link rel="stylesheet" type="text/css" href="${url}"></link>
-  % endfor
-% endif
+</footer>
