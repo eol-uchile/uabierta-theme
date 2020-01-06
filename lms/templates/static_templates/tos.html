@@ -1,0 +1,218 @@
+# -*- coding: utf-8 -*-
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+<%block name="pagetitle">${_(u"Termino de Uso")}</%block>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<style>
+.content-wrapper>.static-container {
+    width: auto;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: 0;
+    max-width: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 40px;
+    line-height: 1.5em;
+}
+@media (min-width: 768px){
+    .content-wrapper>.static-container {
+        width: 750px;
+    }
+}    
+@media (min-width: 992px){
+    .content-wrapper>.static-container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px){
+    .content-wrapper>.static-container {
+        width: 1170px;
+    }
+}
+.static-container {
+    margin: 0 auto 0;
+    max-width: 1200px;
+    padding: 60px 0 120px;
+    width: 100%;
+}
+*, :after, :before {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+h1 {
+    color: inherit;
+    font-weight: 500;
+    -webkit-font-smoothing: auto;
+}
+.content-wrapper>.static-container h1 {
+    margin-top: 0;
+    text-align: left;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+p {
+    text-align: justify;
+}
+p {
+    color: inherit;
+    font: inherit;
+    margin: 0 0 1em;
+}
+</style>
+<section class="static-container tos">
+    <h1>${_(u"TÉRMINOS DE USO")}</h1>
+    <p>
+    I. El presente aviso regula el acceso y el uso de UAbierta, plataforma educativa de la Universidad de Chile (en 
+    adelante “UChile”) para todos aquellos usuarios interesados en sus cursos y servicios.
+    <br>
+    <br>
+    II. Usted se compromete a utilizar el sitio web de conformidad con el presente acuerdo, las leyes y 
+    reglamentos aplicables. En su actual fase piloto, el servicio es operado y administrado por la Iniciativa 
+    Bicentenario dependiente de la Universidad de Chile desde sus oficinas ubicadas en Santiago de Chile. Si 
+    accede al servicio desde un lugar fuera de Chile, usted es responsable de cumplir con las respectivas leyes 
+    locales. Usted acepta que no utilizará el contenido al que acceda a través de UAbierta en ningún país o de 
+    ninguna forma prohibida por las leyes, restricciones o regulaciones, que resultaren aplicables. La utilización 
+    del sitio web le atribuye la condición de usuario y usted manifiesta su aceptación sin reservas de las 
+    presentes condiciones, en el mismo momento en que accede a la web. Se recomienda la lectura atenta de 
+    las mismas.
+    <br>
+    <br>
+    III. Con el fin de participar en el sitio web y cualquier curso, usted debe registrarse y crear una cuenta de 
+    usuario, para lo cual usted deberá proporcionar una dirección válida de correo electrónico y crear un 
+    nombre de usuario y contraseña de usuario. Su nombre de usuario será visible públicamente en el sitio web. 
+    En la configuración de su cuenta y el registro para cualquier curso en particular, es posible que también se le 
+    pida que ingrese información adicional.
+    <br>
+    <br>
+    IV. Para regular la participación en el sitio web y cursos, UAbierta ha generado un Código de Honor que debe 
+    ser íntegramente respetado. 
+    <br>
+    <br>
+    V. El usuario se obliga a abstenerse de utilizar la web y los servicios con fines o efectos ilícitos ni acceder a 
+    información de cuenta de usuarios de terceros por cualquier motivo. Usted acepta que es responsable de su 
+    propio uso del sitio web, incluyendo la carga, la transmisión y la publicación de información y materiales y es 
+    responsable de las consecuencias de este tipo de publicaciones a través del sitio web. El sitio puede 
+    contener áreas de chat, foros, comunidades, calendarios y/o otras facilidades de mensajería o 
+    comunicación, diseñados para permitirle comunicarse con el público en general o con un grupo 
+    (colectivamente, "Servicios de Comunicación"), el usuario acepta usar los Servicios de Comunicación sólo 
+    para anunciar, enviar y recibir mensajes y material que sea apropiado y relativo a UAbierta. 
+    <br>
+    <br>
+    VI. Usted acepta que cuando utilice un Servicio de Comunicación no podrá: Difamar, abusar, acosar, acechar, 
+    amenazar o de alguna forma violar los derechos legales de otros; publicar, enviar, cargar, distribuir o 
+    divulgar cualquier asunto, tema, nombre, material o información de carácter difamatorio, ilegal, obsceno, 
+    indecente o ilegal; cargar archivos que contengan software u otro material protegido por leyes de propiedad 
+    intelectual (o por derechos de privacidad o publicidad) a menos que usted posea o controle los derechos 
+    respectivos, o haya recibido todos los consentimientos necesarios; cargar archivos que contengan virus, 
+    archivos corruptos, o cualquier otro software o programas que puedan dañar la operación del sistema o de 
+    computador de otro; Anunciar u ofrecer la venta o compra de cualquier bien o servicio para cualquier 
+    finalidad comercial, salvo que dicho Servicio de Comunicación permita específicamente ese tipo de 
+    mensajes; o realizar encuestas, concursos, esquemas piramidales o correos en cadena; Descargar cualquier 
+    archivo enviado por otro usuario de un Servicio de Comunicación que usted sepa, o razonablemente debería 
+    saber, que no deban distribuirse legalmente de esa forma; Falsificar o eliminar cualquier atribución de autor, 
+    avisos legales o de otro tipo o designaciones de propiedad o rótulos del origen o fuente del software u otro 
+    material contenido en un archivo que se sube, restringir o inhibir que otros usuarios puedan usar y disfrutar 
+    de los Servicios de Comunicación; Violar cualesquiera códigos de conducta u otras guías que puedan 
+    aplicarse a un Servicio de Comunicación en particular; cosechar o de otra manera recopilar información 
+    acerca de otros, incluyendo direcciones de correo electrónico, sin su consentimiento; violar cualquier ley o 
+    regulación aplicable. UAbierta no tiene la obligación de monitorizar los Servicios de Comunicación. Sin 
+    embargo, UAbierta se reserva el derecho de revisar el material enviado a un Servicio de Comunicación y de 
+    remover cualquier material a requerimiento de autoridad competente.
+    <br>
+    <br>
+    VII. UAbierta se reserva el derecho de suspender el acceso al usuario a cualquiera o todos los Servicios de 
+    Comunicación en cualquier momento sin previo aviso y por la razón que sea. 
+    <br>
+    <br>
+    VIII. UAbierta no controla ni aprueba el contenido, mensajes, o información encontrada en los Servicios de 
+    Comunicación y, por tanto, UAbierta niega específicamente cualquier responsabilidad en relación a los 
+    Servicios de Comunicación y con cualesquiera acciones resultantes de su participación en cualquier Servicio 
+    de Comunicación. 
+    <br>
+    <br>
+    IX. Con motivos de difusión y divulgación de conocimiento, UAbierta podrá utilizar los contenidos, mensajes 
+    o información provista por los participantes, otorgando los usuarios una licencia de derechos de autor, no 
+    exclusiva, gratuita, indefinida y de alcance global a la Universidad de Chile para que puede utilizar 
+    libremente dichos contenidos, en cualquiera de las formas a que se refiere la Ley de Propiedad Intelectual, 
+    en instancias acordes a los cursos específicos o del proyecto en general, reconociendo la autoría de éstos.
+    <br>
+    <br>
+    X. UAbierta incluye vínculos, enlaces o marcadores a páginas de otros sitios ya sea de sitios externos sobre 
+    los que no tiene control o injerencia alguna, o de otros servicios de la Universidad de Chile fuera de 
+    UAbierta. Las páginas externas son seleccionadas y evaluadas según su pertinencia a los objetivos de un 
+    determinado curso. Sin embargo, UAbierta no se hace responsable por el contenido de las mismas, dado 
+    que no produce, mantiene o actualiza esos sitios externos, como tampoco puede alterar su contenido. Usted 
+    reconoce y acepta que dicho contenido puede cambiar sin previo aviso y sin el consentimiento de UAbierta. 
+    Por lo tanto, la inclusión de un vínculo, enlace o marcador a un sitio externo desde UAbierta nunca debe 
+    entenderse como una adhesión a ese sitio, a sus responsables o a los productos o servicios que ofrezca.
+    <br>
+    <br>
+    XI. Los textos, artículos, evaluaciones, vídeos, imágenes y otros materiales de instrucción proporcionadas en 
+    los cursos que se ofrecen son para estricto uso personal y/o sin fines de lucro en relación únicamente con 
+    dichos cursos, a menos que en la página respectiva se indique expresamente lo contrario. Para su uso en 
+    otro contexto con fines educativos o divulgativos, se debe cumplir con las correspondientes condiciones de 
+    licenciamiento de las obras individuales utilizadas en los cursos. 
+    <br>
+    <br>
+    XII. Usted acepta que no adquiere ningún derecho de propiedad respecto cualquier contenido protegido. 
+    <br>
+    <br>
+    XIII. Información del usuario. Usted acepta que toda la información proporcionada por usted es exacta, 
+    actualizada y completa y que va a mantener y actualizar su información para que sea exacta, actualizada y 
+    completa. Usted reconoce que si cualquier información proporcionada por usted es falsa, inexacta, no 
+    actualizada o incompleta, UAbierta se reserva el derecho a denegar el acceso al curso seleccionado o de 
+    cancelar su cuenta de usuario.
+    <br>
+    <br>
+    XIV. Se informa al usuario que debido a la configuración de los sistemas de algunos proveedores de Internet 
+    predispuesta para sus clientes, y por razones ajenas a UAbierta, podría no percibir el contenido no 
+    actualizado de las páginas visualizando las accedidas en anteriores visitas. Si se diera este caso, UAbierta no 
+    se hace responsable, y recomienda al usuario que configure su navegador de Internet, con el fin de que 
+    actualice las páginas cada vez que se visiten.
+    <br>
+    <br>
+    XV. UAbierta no se responsabiliza de cualquier daño o perjuicio en el software o hardware del usuario 
+    producido por el acceso del mismo a las páginas web, así como del ocasionado por la utilización o 
+    reproducción de la información contenida. La información, software, productos y servicios incluidos en o 
+    disponibles a través del sitio puede incluir inexactitudes o errores tipográficos, cambios periódicos de la 
+    información contenida. 
+    <br>
+    <br>
+    XVI. La información generada por las cookies se utiliza exclusivamente para evaluar el uso de este sitio web 
+    por parte de los usuarios, recopilando informes sobre la actividad del sitio web en su conjunto. Puede evitar 
+    el almacenamiento de las cookies seleccionando la configuración apropiada de su navegador. Sin embargo, 
+    si activa esta configuración debe tener en cuenta que es posible que no pueda disfrutar de un 
+    funcionamiento correcto y pleno de todas las características de este sitio.
+    <br>
+    <br>
+    XVII. UAbierta se reserva el derecho de efectuar las modificaciones que estime oportunas, pudiendo 
+    cambiar, suspender o interrumpir cualquier aspecto del sitio web o curso. UAbierta puede poner reglas al 
+    uso de la página web o restringir su acceso a parte o a todo el sitio. Así mismo, se reserva el derecho de 
+    cancelar, interrumpir, retrasar, cambiar de instructores, o modificar cualquier curso por cualquier motivo. Se 
+    comunicarán estos cambios públicamente en la medida en que los usuarios pudieran verse afectados.
+    <br>
+    <br>
+    XVIII. Para ser usuario de UAbierta se debe tener una edad mínima de 14 años de edad al momento de 
+    inscribirse . Sin embargo, podrían existir cursos con restricciones particulares en ese sentido. 
+    <br>
+    <br>
+    XIX. UAbierta se compromete a proteger los datos personales de los usuarios, utilizarlos únicamente para 
+    fines de comunicación de la plataforma y, en forma agregada, para fines estadísticos y evaluativos, 
+    obligándose a no comunicarlos a terceros bajo ninguna circunstancia, salvo orden judicial específica.
+    <br>
+    <br>
+    XX. Ante cualquier litigio, discrepancia o situación de conflicto, UAbierta se rige por las leyes chilenas y 
+    cualquier conflicto entre el usuario y Uabierta deberá ser conocido por los tribunales ordinarios de justicia 
+    de la ciudad de Santiago.
+    <br>
+    <br>
+    <br>
+    Última actualización: 28 Julio 2015
+    </p>
+</section>
+    
