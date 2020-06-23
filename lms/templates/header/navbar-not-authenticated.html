@@ -152,13 +152,6 @@ from six import text_type
         <div class="mobile-nav-item hidden-mobile nav-item "><a class="navbar-item-info header-item" href="/contact">Contacto</a></div>
         <span class="padder"></span>
       % if allows_login:
-        % if restrict_enroll_for_course:
-          <div class="mobile-nav-item hidden-mobile nav-item">
-          </div>
-          <div class="mobile-nav-item hidden-mobile nav-item">
-            <a class="sign-in-btn btn" href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}">${_("Sign in")}</a>
-          </div>
-        % else:
           % if allow_public_account_creation:
           <div class="mobile-nav-item hidden-mobile nav-item">
               <a class="navbar-item-info header-item uabierta-button" href="/register${login_query()}">
@@ -171,7 +164,6 @@ from six import text_type
                 ${_("Sign in")}
               </a>
           </div>
-        % endif
       % endif
     </div>
   </div>
