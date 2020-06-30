@@ -144,6 +144,9 @@ nav ul, nav ol {
                   <a id="about" href="${marketing_link('ABOUT')}">${_("About")}</a>
                 </li>
                 %endif
+                <li style="">
+                  <a id="manual" href="${static.url('edx-uabierta/uploads/manualuabierta_2020.pdf')}" target="_blank">Manual</a>
+                </li>
                 %if settings.MKTG_URL_LINK_MAP.get('FAQ'):
                 <li style="">
                   <a id="faq" href="${marketing_link('FAQ')}">${_("FAQ")}</a>
