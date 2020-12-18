@@ -12,7 +12,7 @@ from six import text_type
 %>
 
 <%
-  show_explore_courses = settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing
+  show_explore_courses = settings.FEATURES.get('COURSES_ARE_BROWSABLE')
   show_sysadmin_dashboard = settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff
   self.real_user = getattr(user, 'real_user', user)
 

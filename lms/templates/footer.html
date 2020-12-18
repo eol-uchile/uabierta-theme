@@ -7,6 +7,7 @@
   from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
 %>
 <% footer = get_footer(is_secure=is_secure) %>
+<% icp_license_info = getattr(settings, 'ICP_LICENSE_INFO', {})%>
 <%namespace name='static' file='static_content.html'/>
 <style>
 .view-login footer, .view-passwordreset footer, .view-register footer, body footer {
@@ -145,6 +146,9 @@ nav ul, nav ol {
                 %endif
                 <li style="">
                   <a id="manual" href="${static.url('edx-uabierta/uploads/manualuabierta_2020.pdf')}" target="_blank">Manual</a>
+                </li>
+                <li style="">
+                  <a id="certificates" href="/certificates/validate">Validación de certificados</a>
                 </li>
                 %if settings.MKTG_URL_LINK_MAP.get('FAQ'):
                 <li style="">
