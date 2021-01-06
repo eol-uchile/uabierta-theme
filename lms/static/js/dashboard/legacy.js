@@ -101,17 +101,11 @@ var edx = edx || {};
       courseKey
     ) {
       var diagAttr = {};
-
+      // EOL: no refunds, all cases
       if (isPaidCourse) {
-        if (showRefundOption) {
-          diagAttr["data-refund-info"] = gettext(
-            "You will be refunded the amount you paid."
-          );
-        } else {
-          diagAttr["data-refund-info"] = gettext(
-            "You will not be refunded the amount you paid."
-          );
-        }
+        diagAttr["data-refund-info"] = gettext(
+          "You will not be refunded the amount you paid."
+        );
         diagAttr["data-track-info"] = gettext(
           "Are you sure you want to unenroll from the purchased course " +
             "{courseName} ({courseNumber})?"
@@ -127,7 +121,7 @@ var edx = edx || {};
             "{certNameLong}  track of {courseName}  ({courseNumber})?"
         );
         diagAttr["data-refund-info"] = gettext(
-          "You will be refunded the amount you paid."
+          "You will not be refunded the amount you paid."
         );
       } else {
         diagAttr["data-track-info"] = gettext(
@@ -135,8 +129,7 @@ var edx = edx || {};
             "{certNameLong} track of {courseName} ({courseNumber})?"
         );
         diagAttr["data-refund-info"] = gettext(
-          "The refund deadline for this course has passed," +
-            "so you will not receive a refund."
+          "You will not be refunded the amount you paid."
         );
       }
 
@@ -191,7 +184,7 @@ var edx = edx || {};
             courseNumber,
             courseName,
             enrollmentMode,
-            false,
+            false, // data.course_refundable_status
             courseKey
           );
 
