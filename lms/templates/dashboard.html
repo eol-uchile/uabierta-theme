@@ -41,15 +41,7 @@ from student.models import CourseEnrollment
 <%block name="js_extra">
   <script src="${static.url('js/commerce/credit.js')}"></script>
   <%static:js group='dashboard'/>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      edx.dashboard.legacy.init({
-        dashboard: "${reverse('dashboard') | n, js_escaped_string}",
-        signInUser: "${reverse('signin_user') | n, js_escaped_string}",
-        changeEmailSettings: "${reverse('change_email_settings') | n, js_escaped_string}"
-      });
-    });
-  </script>
+  <script src="${static.url('js/eol-legacy.js')}"></script>
   <%static:webpack entry="UnenrollmentFactory">
     UnenrollmentFactory({
       urls: {
