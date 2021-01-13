@@ -242,7 +242,7 @@ username = get_enterprise_learner_generic_name(request) or student.username
                 </section>
                 ## EOL: Render grade formulas
                 <div style="font-size: small">
-                    <b>Porcentaje Subsecci&oacute;n: </b><i>redondear(suma(Puntaje Obtenido)/suma(Puntaje Posible) * 100 + 0.05)/100</i><br/>
+                    <b>Porcentaje Subsecci&oacute;n: </b><i>redondear(suma(Puntaje Obtenido)/suma(Puntaje Posible) * 100)/100</i><br/>
                     <b>Calificaci&oacute;n Final: </b><i>suma(peso * suma(Porcentaje Subsecci&oacute;n) / Cantidad Subsecci&oacute;nes)</i><br/>
                     <b>Escala 1.0 a 7.0: </b><i>redondear(10 * (3 * Calificaci&oacute;n Final / exigencia + 1)) / 10, Si Calificaci&oacute;n Final < exigencia; redondear(10 * (3 * Calificaci&oacute;n Final / (1 - exigencia) + (7 - (3 / (1 - exigencia))))) / 10, Si Calificaci&oacute;n Final >= exigencia</i>
                 </div>
