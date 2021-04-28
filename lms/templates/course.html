@@ -3,7 +3,7 @@
 <%!
 from django.utils.translation import ugettext as _
 from django.urls import reverse
-from six import text_type
+from six import text_type, string_types
 import locale
 from django.utils import timezone
 now = timezone.now() 
@@ -40,41 +40,45 @@ now = timezone.now()
         </div>
         <div class="bottom" >
           <span class="university">Universidad_de_Chile</span>           
-        <% 
-          if course.start is not None:
-              month = course.start.strftime('%m')
-              day = course.start.strftime('%d')
-              year = course.start.strftime('%Y')
-              aux_month = "Enero"
-              if month == "02":
-                aux_month = "Feb"
-              elif month == "03":
-                aux_month = "Marzo"
-              elif month == "04":
-                aux_month = "Abril"
-              elif month == "05":
-                aux_month = "Mayo"
-              elif month == "06":
-                aux_month = "Junio"
-              elif month == "07":
-                aux_month = "Julio"
-              elif month == "08":
-                aux_month = "Agos"
-              elif month == "09":
-                aux_month = "Sept"
-              elif month == "10":
-                aux_month = "Oct"
-              elif month == "11":
-                aux_month = "Nov"
-              elif month == "12":
-                aux_month = "Dic"
+          <% 
+            course_start_date = ''
+            aux_course_start_date = course.advertised_start or course.start
+            if aux_course_start_date is not None:
+              if isinstance(aux_course_start_date, string_types):
+                course_start_date = aux_course_start_date
+              else:
+                    month = aux_course_start_date.strftime('%m')
+                    day = aux_course_start_date.strftime('%d')
+                    year = aux_course_start_date.strftime('%Y')
+                    aux_month = "Enero"
+                    if month == "02":
+                      aux_month = "Feb"
+                    elif month == "03":
+                      aux_month = "Marzo"
+                    elif month == "04":
+                      aux_month = "Abril"
+                    elif month == "05":
+                      aux_month = "Mayo"
+                    elif month == "06":
+                      aux_month = "Junio"
+                    elif month == "07":
+                      aux_month = "Julio"
+                    elif month == "08":
+                      aux_month = "Agos"
+                    elif month == "09":
+                      aux_month = "Sept"
+                    elif month == "10":
+                      aux_month = "Oct"
+                    elif month == "11":
+                      aux_month = "Nov"
+                    elif month == "12":
+                      aux_month = "Dic"
+                    endif
+                    course_start_date = '{} {} {}'.format(day, aux_month, year)
               endif
-          else:
-            aux_month = ""
-            day = ""
-            year = ""
-        %>        
-        <span class="start-date">${day} ${aux_month} ${year}</span>           
+            endif
+          %>        
+        <span class="start-date">${course_start_date}</span>
         </div>
       </section>
       <div class="meta-info">
