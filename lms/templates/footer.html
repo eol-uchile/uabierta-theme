@@ -167,11 +167,9 @@ nav ul, nav ol {
                   <a href="${marketing_link('HONOR')}">${_(u"Código de honor")}</a>
                 </li>
                 %endif
-                ##%if settings.MKTG_URL_LINK_MAP.get('PRIVACY'):
-                ##<li style="">
-                ##  <a href="${marketing_link('PRIVACY')}">${_("Privacy Policy")}</a>
-                ##</li>
-                ##%endif
+                <li>
+                  <a href="https://www.uchile.cl/portal/informacion-general/174996/politica-de-privacidad-de-la-informacion-y-datos-personales" target="_blank">Política de privacidad</a>
+                </li>
                 %if settings.MKTG_URL_LINK_MAP.get('AGENDA'):
                 <li style="">
                   <a href="${marketing_link('AGENDA')}">${_("Agenda")}</a>
