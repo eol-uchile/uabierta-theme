@@ -98,7 +98,11 @@ if (is_proctored_exam) {
 } else {
     exam_value = gettext('Timed Exam');
 }
+var display_name_duplicar = xblockInfo.get('display_name').replace(/'/g,"")
+display_name_duplicar = display_name_duplicar.replace(/"/g,"")
+
 %>
+
 <% if (parentInfo) { %>
 <li class="outline-item outline-<%- xblockType %> <%- visibilityClass %> is-draggable <%- includesChildren ? 'is-collapsible' : '' %> <%- isCollapsed ? 'is-collapsed' : '' %>"
     data-parent="<%- parentInfo.get('id') %>" data-locator="<%- xblockInfo.get('id') %>" id="<%- xblockInfo.get('id') %>">
@@ -154,6 +158,12 @@ if (is_proctored_exam) {
                     </li>
                 <% } %>
                 <% if (xblockInfo.isDuplicable()) { %>
+                    <li class="action-item action-copy-to-other-course">
+                        <a href="#" onclick="duplicar_xblock('<%- xblockInfo.get('id') %>', '<%- display_name_duplicar %>');" data-tooltip="Duplicar a otro Curso" class="copy-to-other-course-button action-button">
+                            <span class="icon fa fa-share-square-o" aria-hidden="true"></span>
+                            <span class="sr action-button-text">Duplicar a otro Curso</span>
+                        </a>
+                    </li>
                     <li class="action-item action-duplicate">
                         <a href="#" data-tooltip="<%- gettext('Duplicate') %>" class="duplicate-button action-button">
                             <span class="icon fa fa-copy" aria-hidden="true"></span>
