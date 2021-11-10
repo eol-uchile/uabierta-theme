@@ -9,202 +9,92 @@
 <% footer = get_footer(is_secure=is_secure) %>
 <% icp_license_info = getattr(settings, 'ICP_LICENSE_INFO', {})%>
 <%namespace name='static' file='static_content.html'/>
+
 <style>
-.view-login footer, .view-passwordreset footer, .view-register footer, body footer {
-    background-color: #fff;
-    color: #00aff0;
-    padding: 30px 0;
-    font-size: .9em;
-    overflow: hidden;
-}
-.view-login footer .footer-container, .view-passwordreset footer .footer-container, .view-register footer .footer-container, body footer .footer-container {
-    width: auto;
-    height: auto;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    min-width: 0;
-    max-width: none;
-    padding-top: 0;
-    padding-bottom: 0;
+  footer {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    padding: 45px 0;
+    border-top: 10px solid #00abbe;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  footer {
+    color: #7d736d;
+  }
+
+  footer .footer-bottom {
+    padding-top: 30px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+
+  footer ul { 
+    list-style: none outside;
+    margin-right: 12px;
+  }
+
+  footer ul li {
+    display: inline-block;
+    margin-right: 6px;
+  }
+
+  footer ul i {
+    color: #65666C;
+  }
+
+  footer .footer_button {
+    margin: -12px 0 0;
+    padding: 0 15px;
+    border-radius: 50px;
+    color: #65666C!important;
+    background-color: transparent;
+    box-shadow: none!important;
+    display: inline-block;
     position: relative;
-}
-@media (min-width: 768px){
-  .view-login footer .footer-container, .view-passwordreset footer .footer-container, .view-register footer .footer-container, body footer .footer-container {
-      width: 750px;
+    overflow: hidden;
+    width: 42px;
+    height: 42px;
+    line-height: 42px!important;
+    font-size: 25px!important;
+    text-align: center;
+    text-decoration: none!important;
+    font-family: inherit!important;
+    transition: color .1s ease-in-out, background-color .1s ease-in-out, border-color .1s ease-in-out;
   }
-}
-@media (min-width: 992px){
-  .view-login footer .footer-container, .view-passwordreset footer .footer-container, .view-register footer .footer-container, body footer .footer-container {
-      width: 970px;
-  }
-}
-@media (min-width: 1200px){
-  .view-login footer .footer-container, .view-passwordreset footer .footer-container, .view-register footer .footer-container, body footer .footer-container {
-      width: 1170px;
-  }
-}
-.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .content-wrapper .container:after, .content-wrapper .container:before, .content-wrapper .container>.discussion-body:after, .content-wrapper .container>.discussion-body:before, .content-wrapper .course-material:after, .content-wrapper .course-material:before, .content-wrapper section.course-info header.course-profile .intro-inner-wrapper:after, .content-wrapper section.course-info header.course-profile .intro-inner-wrapper:before, .content-wrapper>.activation:after, .content-wrapper>.activation:before, .content-wrapper>.book-wrapper:after, .content-wrapper>.book-wrapper:before, .content-wrapper>.dashboard:after, .content-wrapper>.dashboard:before, .content-wrapper>.find-courses .container:after, .content-wrapper>.find-courses .container:before, .content-wrapper>.home .container:after, .content-wrapper>.home .container:before, .content-wrapper>.home>header .outer-wrapper:after, .content-wrapper>.home>header .outer-wrapper:before, .content-wrapper>.introduction:after, .content-wrapper>.introduction:before, .content-wrapper>.login:after, .content-wrapper>.login:before, .content-wrapper>.outside-app:after, .content-wrapper>.outside-app:before, .content-wrapper>.passwordreset:after, .content-wrapper>.passwordreset:before, .content-wrapper>.register:after, .content-wrapper>.register:before, .content-wrapper>.static-container:after, .content-wrapper>.static-container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .uchile-container-modal:after, .uchile-container-modal:before, .uchile-container:after, .uchile-container:before, .modal-footer:after, .modal-footer:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before, .view-login .leanModal_box.video-modal:after, .view-login .leanModal_box.video-modal:before, .view-login .modal.video-modal:after, .view-login .modal.video-modal:before, .view-login footer .footer-container:after, .view-login footer .footer-container:before, .view-login header.global-new:after, .view-login header.global-new:before, .view-login header.global-new>nav:after, .view-login header.global-new>nav:before, .view-login header.global.slim:after, .view-login header.global.slim:before, .view-login header.global.slim>nav:after, .view-login header.global.slim>nav:before, .view-login header.global:after, .view-login header.global:before, .view-login header.global>nav:after, .view-login header.global>nav:before, .view-passwordreset .leanModal_box.video-modal:after, .view-passwordreset .leanModal_box.video-modal:before, .view-passwordreset .modal.video-modal:after, .view-passwordreset .modal.video-modal:before, .view-passwordreset footer .footer-container:after, .view-passwordreset footer .footer-container:before, .view-passwordreset header.global-new:after, .view-passwordreset header.global-new:before, .view-passwordreset header.global-new>nav:after, .view-passwordreset header.global-new>nav:before, .view-passwordreset header.global.slim:after, .view-passwordreset header.global.slim:before, .view-passwordreset header.global.slim>nav:after, .view-passwordreset header.global.slim>nav:before, .view-passwordreset header.global:after, .view-passwordreset header.global:before, .view-passwordreset header.global>nav:after, .view-passwordreset header.global>nav:before, .view-register .leanModal_box.video-modal:after, .view-register .leanModal_box.video-modal:before, .view-register .modal.video-modal:after, .view-register .modal.video-modal:before, .view-register footer .footer-container:after, .view-register footer .footer-container:before, .view-register header.global-new:after, .view-register header.global-new:before, .view-register header.global-new>nav:after, .view-register header.global-new>nav:before, .view-register header.global.slim:after, .view-register header.global.slim:before, .view-register header.global.slim>nav:after, .view-register header.global.slim>nav:before, .view-register header.global:after, .view-register header.global:before, .view-register header.global>nav:after, .view-register header.global>nav:before, body .leanModal_box.video-modal:after, body .leanModal_box.video-modal:before, body .modal.video-modal:after, body .modal.video-modal:before, body footer .footer-container:after, body footer .footer-container:before, body header.global-new:after, body header.global-new:before, body header.global-new>nav:after, body header.global-new>nav:before, body header.global.slim:after, body header.global.slim:before, body header.global.slim>nav:after, body header.global.slim>nav:before, body header.global:after, body header.global:before, body header.global>nav:after, body header.global>nav:before {
-    content: " ";
-    display: table;
-}
-.btn-group-vertical>.btn-group:after, .btn-toolbar:after, .clearfix:after, .container-fluid:after, .container:after, .content-wrapper .container:after, .content-wrapper .container>.discussion-body:after, .content-wrapper .course-material:after, .content-wrapper section.course-info header.course-profile .intro-inner-wrapper:after, .content-wrapper>.activation:after, .content-wrapper>.book-wrapper:after, .content-wrapper>.dashboard:after, .content-wrapper>.find-courses .container:after, .content-wrapper>.home .container:after, .content-wrapper>.home>header .outer-wrapper:after, .content-wrapper>.introduction:after, .content-wrapper>.login:after, .content-wrapper>.outside-app:after, .content-wrapper>.passwordreset:after, .content-wrapper>.register:after, .content-wrapper>.static-container:after, .dl-horizontal dd:after, .form-horizontal .form-group:after, .uchile-container-modal:after, .uchile-container:after, .modal-footer:after, .nav:after, .navbar-collapse:after, .navbar-header:after, .navbar:after, .pager:after, .panel-body:after, .row:after, .view-login .leanModal_box.video-modal:after, .view-login .modal.video-modal:after, .view-login footer .footer-container:after, .view-login header.global-new:after, .view-login header.global-new>nav:after, .view-login header.global.slim:after, .view-login header.global.slim>nav:after, .view-login header.global:after, .view-login header.global>nav:after, .view-passwordreset .leanModal_box.video-modal:after, .view-passwordreset .modal.video-modal:after, .view-passwordreset footer .footer-container:after, .view-passwordreset header.global-new:after, .view-passwordreset header.global-new>nav:after, .view-passwordreset header.global.slim:after, .view-passwordreset header.global.slim>nav:after, .view-passwordreset header.global:after, .view-passwordreset header.global>nav:after, .view-register .leanModal_box.video-modal:after, .view-register .modal.video-modal:after, .view-register footer .footer-container:after, .view-register header.global-new:after, .view-register header.global-new>nav:after, .view-register header.global.slim:after, .view-register header.global.slim>nav:after, .view-register header.global:after, .view-register header.global>nav:after, body .leanModal_box.video-modal:after, body .modal.video-modal:after, body footer .footer-container:after, body header.global-new:after, body header.global-new>nav:after, body header.global.slim:after, body header.global.slim>nav:after, body header.global:after, body header.global>nav:after {
-    clear: both;
-}
-.view-login footer .footer-container p:last-child, .view-passwordreset footer .footer-container p:last-child, .view-register footer .footer-container p:last-child, body footer .footer-container p:last-child {
-    margin-bottom: 0;
-}
-body footer .footer-container p {
-    color: inherit;
-    font: inherit;
-    margin: 0 0 1em;
-    text-align: justify;
-}
-.view-login footer .footer-container a, .view-login footer .footer-container a:hover, .view-login footer .footer-container a:link, .view-login footer .footer-container a:link:hover, .view-login footer .footer-container a:visited, .view-login footer .footer-container a:visited:hover, .view-passwordreset footer .footer-container a, .view-passwordreset footer .footer-container a:hover, .view-passwordreset footer .footer-container a:link, .view-passwordreset footer .footer-container a:link:hover, .view-passwordreset footer .footer-container a:visited, .view-passwordreset footer .footer-container a:visited:hover, .view-register footer .footer-container a, .view-register footer .footer-container a:hover, .view-register footer .footer-container a:link, .view-register footer .footer-container a:link:hover, .view-register footer .footer-container a:visited, .view-register footer .footer-container a:visited:hover, body footer .footer-container a, body footer .footer-container a:hover, body footer .footer-container a:link, body footer .footer-container a:link:hover, body footer .footer-container a:visited, body footer .footer-container a:visited:hover {
-    color: inherit;
-}
-body footer .footer-container b, body footer .footer-container strong {
-    font-weight: 600;
-}
-nav ul, nav ol {
-    list-style: none;
-    list-style-image: none;
-    margin: 0;
-    padding: 0;
-    font: inherit;
-    color: inherit;
-}
-.view-login footer .footer-container nav ul li, .view-passwordreset footer .footer-container nav ul li, .view-register footer .footer-container nav ul li, body footer .footer-container nav ul li {
-    display: inline-block;
-    margin: 0 5px 0 0;
-}
-.view-login footer .footer-container nav ul li:after, .view-passwordreset footer .footer-container nav ul li:after, .view-register footer .footer-container nav ul li:after, body footer .footer-container nav ul li:after {
-    content: '|';
-    padding: 0 0 0 5px;
-}
-.view-login footer .footer-container nav ul li:last-child, .view-passwordreset footer .footer-container nav ul li:last-child, .view-register footer .footer-container nav ul li:last-child, body footer .footer-container nav ul li:last-child {
-    margin: 0;
-}
-.view-login footer .footer-container nav ul li:last-child::after, .view-passwordreset footer .footer-container nav ul li:last-child::after, .view-register footer .footer-container nav ul li:last-child::after, body footer .footer-container nav ul li:last-child::after {
-    content: '';
-    padding: 0 0 0 5px;
-}
-.list-inline {
-    padding-left: 0;
-    list-style: none;
-    margin-left: -5px;
-}
-.list-inline>li {
-    display: inline-block;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-.social-item {
-    list-style: none;
-}
-.view-login footer .footer-container i.fa, .view-passwordreset footer .footer-container i.fa, .view-register footer .footer-container i.fa, body footer .footer-container i.fa {
-    margin-right: 5px;
-}
-.view-login footer .footer-container .by-uchile, .view-passwordreset footer .footer-container .by-uchile, .view-register footer .footer-container .by-uchile, body footer .footer-container .by-uchile {
-    float: right!important;
-    float: right;
-}
 </style>
-<footer>
-  <div class="footer-container">
-      <center>
-      <div name="menu-inferior">
-        <img src="${static.url('edx-uabierta/images/logo_footer/logo_pie_1.jpg')}"/>
-        <img src="${static.url('edx-uabierta/images/logo_footer/logo_pie_2.jpg')}"/>
-        <img src="${static.url('edx-uabierta/images/logo_footer/logo_pie_4.jpg')}"/>
 
-         <p>&nbsp;</p>
+<footer class="mt-3" style="background-image: url(${static.url('edx-uabierta/images/logo_footer/footer.jpg')});">
+  <div class="uabierta-container">
+    <div class="row">
+      <div class="col-md-4 px-3 mx-auto">
+        <h4 style="color: #1d262d;">UABIERTA</h4>
+        <p>Lorem ipsum uabierta proyecto 2021 objet lorem stem isp ipsum uabierta proyecto 2021.</p>
+        <div class="text-center p-2">
+          <img src="${static.url('edx-uabierta/images/logo_footer/uchile.png')}" alt="UChile" class="img-fluid">
         </div>
-      </center>
+        <div class="text-center p-2">
+          <img src="${static.url('edx-uabierta/images/logo_footer/openedx.png')}" alt="OpenedX" class="img-fluid">
+        </div>
       </div>
-</footer>
-
-<footer style="background-color: #e4e4e4; color: #00aff0; border-bottom: 5px solid #00aff0;">
-  <div class="footer-container">
-      <div>
-
-          <div  style="float: left; padding-bottom: 4px;">
-              <img src="${static.url('edx-uabierta/images/logo_footer/logo_bajada_chico.png')}"/>
-               <p class="copyright"> <a href="http://code.edx.org">  © Uabierta, Universidad de Chile, OpenEDX, 2020</a>
-
-      	</p>
-          </div>          
-          <div style="float: left; width: 75%;">
-              <p><b></b></p>
-              <nav style="">
-              <ul style="">
-                %if settings.MKTG_URL_LINK_MAP.get('ABOUT'):
-                <li style="">
-                  <a id="about" href="${marketing_link('ABOUT')}">${_("About")}</a>
-                </li>
-                %endif
-                <li style="">
-                  <a id="certificates" href="/certificates/validate">Validación de certificados</a>
-                </li>
-                %if settings.MKTG_URL_LINK_MAP.get('FAQ'):
-                <li style="">
-                  <a id="faq" href="${marketing_link('FAQ')}">${_("FAQ")}</a>
-                </li>
-                %endif
-                %if settings.MKTG_URL_LINK_MAP.get('CONTACT'):
-                <li style="">
-                  <a id="contact" href="${marketing_link('CONTACT')}">${_("Contact")}</a>
-                </li>
-                %endif
-                %if settings.MKTG_URL_LINK_MAP.get('TOS'):
-                <li style="">
-                  <a href="${marketing_link('TOS')}">${_(u"Términos de uso")}</a>
-                </li>
-                %endif
-                %if settings.MKTG_URL_LINK_MAP.get('HONOR'):
-                <li style="">
-                  <a href="${marketing_link('HONOR')}">${_(u"Código de honor")}</a>
-                </li>
-                %endif
-                <li>
-                  <a href="https://www.uchile.cl/portal/informacion-general/174996/politica-de-privacidad-de-la-informacion-y-datos-personales" target="_blank">Política de privacidad</a>
-                </li>
-                %if settings.MKTG_URL_LINK_MAP.get('AGENDA'):
-                <li style="">
-                  <a href="${marketing_link('AGENDA')}">${_("Agenda")}</a>
-                </li>
-                %endif
-                </ul>
-              </nav>
-          </div>
-          
-          <div style="float: right; width: 25%;margin-top: -25px;">
-              <p><b>Síguenos</b></p>
-
-              <nav>
-                  <lu class="list-inline">
-                           <li class="social-item"><a href="https://www.facebook.com/UAbiertaUChile" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
-                    </li>
-                    <li class="social-item"><a href="https://instagram.com/explore/tags/uabiertauchile/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
-                    </li>
-                    <li class="social-item"><a href="https://www.youtube.com/channel/UCKr4gfL_MGbCDECDtPOGdXw?view_as=public" target="_blank"><i class="fa fa-youtube fa-lg"></i></a>
-                    </li>
-                    <li class="social-item"><a href="https://twitter.com/UAbiertaUchile" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                    </li>
-                <lu>
-              </nav>
-          </div>
-
+      <div class="col-md-4 px-3 mx-auto">
+        <a class="twitter-timeline" data-height="400" href="https://twitter.com/UAbiertaUChile?ref_src=twsrc%5Etfw">Tweets by UAbiertaUChile</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
-                   <p>&nbsp;</p>
-
-    <div>
-             <p>&nbsp;</p>
-
     </div>
-    <div class="by-uchile">
-      <a href="/"></a>
-    </div>
+  </div>
+  <div class="uabierta-container footer-bottom text-center">
+      <a id="back_to_top" class="footer_button float-sm-none float-md-right " href="#"><i class="fas fa-chevron-up"></i></a>
+      <div class="float-sm-none float-md-left">© 2021 UABIERTA. Proyecto desarrollado por EOL Universidad de Chile</div>
+      <ul class="social float-sm-none float-md-right">
+        <li class="facebook"><span class="facebook"><a target="_blank" href="https://www.facebook.com/UAbiertaUChile" title="Facebook"><i
+          class="icon fab fa-facebook-f"></i></a></span></li>
+        <li class="twitter"><span class="twitter"><a target="_blank" href="https://twitter.com/UAbiertaUchile" title="Twitter"><i
+          class="icon fab fa-twitter"></i></a></span></li>
+        <li class="youtube"><span class="youtube"><a target="_blank"
+          href="https://www.youtube.com/channel/UCKr4gfL_MGbCDECDtPOGdXw?view_as=pubspanc" title="YouTube"><i
+              class="icon fas fa-play"></i></a></span></li>
+        <li class="instagram"><span class="instagram"><a target="_blank" href="https://instagram.com/UAbiertaUchile" title="Instagram"><i
+          class="icon fab fa-instagram"></i></a></span></li>
+      </ul>
   </div>
 </footer>
