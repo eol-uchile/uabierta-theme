@@ -1,304 +1,328 @@
-/*-----------------------------------------------------*/
-/* edX UChile Custom Style-----------------------------*/
-/*-INDICE----------------------------------------------*/
-/*-----------------------------------------------------*/
-/* 1. Header-------------------------------------------*/
-/* 1.1 Header general----------------------------------*/
-/* 1.2 Header logo generado por edX--------------------*/
-/* 1.3 Header barra navegacion-------------------------*/
-/* 1.3.1 Header Responsivo-----------------------------*/
-/* 1.4 Header botonera login/Register------------------*/
-/* 2. Slide--------------------------------------------*/
-/* 2.1 Slide: dimensionado responsivo movil/escritorio-*/
-/* 2.1 Slide: dimensionado imagen responsivo-----------*/
-/* 3. Grid cursos--------------------------------------*/
-/* 4. Footer-------------------------------------------*/
-/*-----------------------------------------------------*/
 
-
-
-/* 1. Header-------------------------------------------*/
-/* 1.1 Header general----------------------------------*/
-.view-login header.global, .view-login header.global-new, .view-login header.global.slim, .view-passwordreset header.global, .view-passwordreset header.global-new, .view-passwordreset header.global.slim, .view-register header.global, .view-register header.global-new, .view-register header.global.slim, body header.global, body header.global-new, body header.global.slim {
-width: auto;
-height: auto;
-position: relative;
-min-height: 50px;
-padding: 0;
-border: 0 none;
-background-color: #fff !important;
-margin-bottom: 0;
-box-shadow: none;
-border-radius: 0!important;
-}
-.view-login header.global-new>nav, .view-login header.global.slim>nav, .view-login header.global>nav, .view-passwordreset header.global-new>nav, .view-passwordreset header.global.slim>nav, .view-passwordreset header.global>nav, .view-register header.global-new>nav, .view-register header.global.slim>nav, .view-register header.global>nav, body header.global-new>nav, body header.global.slim>nav, body header.global>nav {
-padding: 5px;
-}
-/* 1.2 Header logo generado por edX--------------------*/
-header.global h1.logo {
-display: none;
-}
-/* 1.3 Header barra navegacion-------------------------*/
-.navbar {
-position: relative;
-min-height: 50px;
-margin-bottom: 0px;
-border: 1px solid transparent;
-background-color: #fff;
-}
-.navbar-nav {
-float: left;
-margin-top: 0px;
-width:100%;    
-}
-.navbar-static-top {
-border-radius: 0;
-background-color: #fff;
-}
-header.global .nav-global {
-margin-top: 10px;
-list-style: none;
-float: right;
-padding-left: 10px;
-}
-/* 1.3.1 Header Responsivo-----------------------------*/
-.navbar-brand{
-    width: 100%;
-    height: 100%;      
-}
-.navbar-toggle {
-position: relative;
-float: right;
-margin-right: 15px;
-padding: 9px 10px;
-margin-top: 8px;
-margin-bottom: 8px;
-background-color: transparent;
-background-image: none;
-border: 1px solid #00aff0;
-border-radius: 4px;
-}
-.navbar-toggle .icon-bar {
-display: block;
-width: 22px;
-height: 2px;
-border-radius: 1px;
-background-color: #00aff0;
-}
-body header.global .navbar-nav>li>a{color: #000;}
-body header.global .navbar-nav>li>a:hover{background-color:#00aff0;}
-@media (max-width: 480px){
-.view-login header.global-new>nav .nav-global, .view-login header.global.slim>nav .nav-global, .view-login header.global>nav .nav-global, .view-passwordreset header.global-new>nav .nav-global, .view-passwordreset header.global.slim>nav .nav-global, .view-passwordreset header.global>nav .nav-global, .view-register header.global-new>nav .nav-global, .view-register header.global.slim>nav .nav-global, .view-register header.global>nav .nav-global, body header.global-new>nav .nav-global, body header.global.slim>nav .nav-global, body header.global>nav .nav-global {
-display: table;
-}
-.navbar-nav {
-float: left;
-margin-top: 0px;
-width: 100%;
-}    
-}
-/* 1.4 Header botonera login/Register------------------*/
-.view-login .content-wrapper, .view-passwordreset .content-wrapper, .view-register .content-wrapper, body .content-wrapper {
-width: auto;
-height: auto;
-margin: 0;
-padding: 0;
-background: 0 0;
-padding-bottom: 40px;
-background-color: #fff;
-min-height: 0px;    
-}
-.view-login header.global-new>nav .nav-global a.cta-register, .view-login header.global.slim>nav .nav-global a.cta-register, .view-login header.global>nav .nav-global a.cta-register, .view-passwordreset header.global-new>nav .nav-global a.cta-register, .view-passwordreset header.global.slim>nav .nav-global a.cta-register, .view-passwordreset header.global>nav .nav-global a.cta-register, .view-register header.global-new>nav .nav-global a.cta-register, .view-register header.global.slim>nav .nav-global a.cta-register, .view-register header.global>nav .nav-global a.cta-register, body header.global-new>nav .nav-global a.cta-register, body header.global.slim>nav .nav-global a.cta-register, body header.global>nav .nav-global a.cta-register {
-display: block;
-width: auto;
-height: auto;
-font: inherit;
-background: 0 0;
-display: inline-block;
-font-weight: 400;
-text-align: center;
-vertical-align: middle;
--ms-touch-action: manipulation;
-touch-action: manipulation;
-cursor: pointer;
-background-image: none;
-border: 1px solid transparent;
-white-space: nowrap;
-font-size: 16px;
-line-height: 1.625;
-border-radius: 4px;
--webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
-user-select: none;
-color: #00aff0;
-background-color: #fff;
-border-color: #00aff0;
-text-shadow: none;
-text-overflow: ellipsis;
-transition: all .1s ease-in;
-box-shadow: none;
-margin: 0;
-padding: .5em 1.2em;
-outline: 0;
-overflow: hidden;
-text-transform: none;
-}
-header.global .nav-courseware li, header.global .nav-courseware div {
-display: inline-block;
-margin-top: 10px;
-}
-.view-login header.global-new>nav .nav-global a.cta-register,.view-login header.global.slim>nav .nav-global a.cta-register,.view-login header.global>nav .nav-global a.cta-register,.view-passwordreset header.global-new>nav .nav-global a.cta-register,.view-passwordreset header.global.slim>nav .nav-global a.cta-register,.view-passwordreset header.global>nav .nav-global a.cta-register,.view-register header.global-new>nav .nav-global a.cta-register,.view-register header.global.slim>nav .nav-global a.cta-register,.view-register header.global>nav .nav-global a.cta-register,body header.global-new>nav .nav-global a.cta-register,body header.global.slim>nav .nav-global a.cta-register,body header.global>nav .nav-global a.cta-register:hover
-{
-	background-color: #00aff0;
-	color: #fff;
-}
-.view-login, .view-passwordreset, .view-register, body {
-background-color: #fff;
-}
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-border-color: #fff;
-}
-input[type="submit"]:hover:not(:disabled), input[type="button"]:hover:not(:disabled), button:hover:not(:disabled), .button:hover:not(:disabled) {
-cursor: pointer;
-background-color: #00aff0;
-background-image: none;
-background-image: none;
-}
-.view-login header.global-new>nav .nav-global a.cta-register, .view-login header.global.slim>nav .nav-global a.cta-register, .view-login header.global>nav .nav-global a.cta-register, .view-passwordreset header.global-new>nav .nav-global a.cta-register, .view-passwordreset header.global.slim>nav .nav-global a.cta-register, .view-passwordreset header.global>nav .nav-global a.cta-register, .view-register header.global-new>nav .nav-global a.cta-register, .view-register header.global.slim>nav .nav-global a.cta-register, .view-register header.global>nav .nav-global a.cta-register, body header.global-new>nav .nav-global a.cta-register, body header.global.slim>nav .nav-global a.cta-register, body header.global>nav .nav-global a.cta-register:hover {
-background-color: #00aff0;
-color: #fff;
-}
-.view-login header.global-new>nav ol.user>li.primary>a.dropdown, .view-login header.global.slim>nav ol.user>li.primary>a.dropdown, .view-login header.global>nav ol.user>li.primary>a.dropdown, .view-passwordreset header.global-new>nav ol.user>li.primary>a.dropdown, .view-passwordreset header.global.slim>nav ol.user>li.primary>a.dropdown, .view-passwordreset header.global>nav ol.user>li.primary>a.dropdown, .view-register header.global-new>nav ol.user>li.primary>a.dropdown, .view-register header.global.slim>nav ol.user>li.primary>a.dropdown, .view-register header.global>nav ol.user>li.primary>a.dropdown, body header.global-new>nav ol.user>li.primary>a.dropdown, body header.global.slim>nav ol.user>li.primary>a.dropdown, body header.global>nav ol.user>li.primary>a.dropdown {
-padding: 9.3px 10px;
-border-left: none;
-border-radius: 0 4px 4px 0;
-letter-spacing: normal;
-}
-.view-login header.global-new>nav ol.user ul.dropdown-menu, .view-login header.global.slim>nav ol.user ul.dropdown-menu, .view-login header.global>nav ol.user ul.dropdown-menu, .view-passwordreset header.global-new>nav ol.user ul.dropdown-menu, .view-passwordreset header.global.slim>nav ol.user ul.dropdown-menu, .view-passwordreset header.global>nav ol.user ul.dropdown-menu, .view-register header.global-new>nav ol.user ul.dropdown-menu, .view-register header.global.slim>nav ol.user ul.dropdown-menu, .view-register header.global>nav ol.user ul.dropdown-menu, body header.global-new>nav ol.user ul.dropdown-menu, body header.global.slim>nav ol.user ul.dropdown-menu, body header.global>nav ol.user ul.dropdown-menu {
-width: auto;
-height: auto;
-padding: 0;
-z-index: 10;
-top: 36px;
-left: initial;
-right: 0;
-box-shadow: none;
-border: 1px solid #00aff0;
-border-top: 1px solid #00aff0;
-border-top-right-radius: 0;
-background-color: #fff;
-}
-.view-howitworks .nav-global-01 a, .view-courses .nav-global-02 a, .view-schools .nav-global-03 a, .view-register .nav-global-04 a {
-text-decoration: none;
-color: #fff !important;
-}
-.view-login header.global-new>nav ol.user>li.primary>a.user-link, .view-login header.global.slim>nav ol.user>li.primary>a.user-link, .view-login header.global>nav ol.user>li.primary>a.user-link, .view-passwordreset header.global-new>nav ol.user>li.primary>a.user-link, .view-passwordreset header.global.slim>nav ol.user>li.primary>a.user-link, .view-passwordreset header.global>nav ol.user>li.primary>a.user-link, .view-register header.global-new>nav ol.user>li.primary>a.user-link, .view-register header.global.slim>nav ol.user>li.primary>a.user-link, .view-register header.global>nav ol.user>li.primary>a.user-link, body header.global-new>nav ol.user>li.primary>a.user-link, body header.global.slim>nav ol.user>li.primary>a.user-link, body header.global>nav ol.user>li.primary>a.user-link {
-max-width: 100%;
-}
-.nav-global-01 a:hover{
-text-decoration: none;
-color: #00aff0 !important;
-}
-/* 2. Slide--------------------------------------------*/
-/* 2.1 Slide: dimensionado responsivo movil/escritorio-*/
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-    width: 100%;
-    max-height: 300px;
-    min-height: 200px;
-}
-/* 2.1 Slide: dimensionado imagen responsivo-----------*/
-.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
-display: inherit;
-max-width: 100%;
-height: auto;
-}
-/* 3. Grid cursos--------------------------------------*/
-.content-wrapper>.home>header {
-width: auto;
-height: auto;
-box-shadow: none;
-background-size: 100% 100%;
-border: none;
-background-image: none;
-margin: 0;
-padding: 0px;
-}
-.content-wrapper>.home {
-margin: 0;
-background: #3299cc;
-}
-/* 4. Footer-------------------------------------------*/
-.social-item{
-	list-style:none;
-}
-/* 5. Formularios--------------------------------------*/
-.content-wrapper>.register .content form .group-form-personalinformation, .content-wrapper>.register .content form .group-form-personalinformation2 {
-display: block;
-}
-p{
-	text-align: justify;
+header {
+  font-family: 'DM Sans', sans-serif !important;
+  border-bottom: 1px solid #2584ff45;
 }
 
-.home>header .media {
-  background: #fff;
-  background: rgba(255,255,255,0.93);
-  border: 0px solid #646464;
-  border-left: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  height: 200px;
-  width: 360px;
-  float: left;
-  padding: 4px;
-  vertical-align: top;
-  z-index: 2;
+p, h1, h2, h3, h4, h5, ul, ol, li, div, button, a, label, input, select, option, textarea {
+  font-family: "Lato", Helvetica, Arial, sans-serif !important;
 }
 
-.row {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 10px;
-  margin-bottom: 10px;
+/* margen header */
+header {
+  margin-bottom: 50px;
 }
 
-.content-wrapper>.home>header {
-  width: auto;
-  height: auto;
+.uabierta-container {
+padding-right: 15px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;
+}
+@media (min-width: 576px) {
+.uabierta-container {
+  width: 540px;
+}
+}
+@media (min-width: 768px) {
+.uabierta-container {
+  width: 720px;
+}
+}
+@media (min-width: 992px) {
+.uabierta-container {
+  width: 960px;
+}
+}
+@media (min-width: 1200px) {
+.uabierta-container {
+  width: 1140px;
+}
+}
+@media (min-width: 1400px) {
+.uabierta-container {
+  width: 1280px;
+}
+}
+
+/* BOTON UABIERTA */
+
+header .uabierta-button {
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  display: block;
+  display: inline-block;
+  font-weight: 400;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  border: 1 px solid transparent;
+  white-space: nowrap;
+  line-height: 1.625;
+  background: linear-gradient( 90deg, rgba(31, 170, 191, 1) 0%, rgba(36, 137, 246, 1) 100%);
+  border-color: #feffff;
+  transition: all .1s ease-in;
   box-shadow: none;
-  background-size: 100% 100%;
-  border: none;
-  background-image: none;
   margin: 0;
-  padding: 0px;
-  border-bottom: 5px solid #00aff0;
-  background-color: #FFFFFF;
-}
-.no-background{
-  background-color: transparent !important; 
-  border: none !important;
-}
-.h2-white{
-	color:#fff;
+  padding: 0.5em 1.2em;
+  color: white !important;
+  line-height: normal !important;
+  font-size: 16px !important;
 }
 
-p.p-blue{
-  color:#3299cc;
-  font-size: 15px;
-  width: 84%;
+header .row.first-row {
+  margin-bottom: 20px;
 }
 
-h2.h2-blue-1{
-  color:#00aff0;
-  font-size: 20px;
-  margin-top: 0px;
-
+.navbar-brand img{
+  padding: 20px 0 0 0;
 }
-.home>header .media .hero{
-  height: 100%;
-  overflow: hidden;
+
+header nav li {
   position: relative;
-  background: url("../images/portada/logo_video.png") center no-repeat;
+}
+
+header nav a {
+  padding: 0 !important;
+  color: #0c1216 !important;
+  text-decoration: none !important;
+  outline: 0;
+  position: relative;
+}
+
+header nav a:after{
+  top: auto;
+  bottom: -4px;
+  background: #0c1216;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  content: "";
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 203;
+  opacity: 0;
+}
+
+header nav a:hover:after {
+  opacity: 1;
+}
+
+header nav a span{
+  display: block;
+  line-height: 60px;
+  padding: 0 20px;
+  white-space: nowrap;
+  border: 0;
+  border-right-width: 1px;
+  border-style: solid;
+  border-color: rgba(0,0,0,.05);
+}
+
+header .navbar-toggler {
+  color: #00abbe;
+  background: none;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+header .navbar-toggler:hover, header .navbar-toggler:focus {
+  color: #00abbe;
+  background: none;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+header .container-fluid {
+  background-color: #0083ff;
+}
+
+header .container-fluid a, header .container-fluid i {
+  color: white;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+  font-size: 13px;
+  font-weight: 800;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+header .container-fluid a:hover {
+  color: #eaeaea;
+}
+
+header .nav-logged a {
+  color: #0c1216 !important;
+  text-decoration: none !important;
+}
+
+footer.uabierta-footer {
+  font-family: "Lato", Helvetica, Arial, sans-serif !important;
+  padding: 45px 0;
+  border-top: 10px solid #00abbe;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
+}
+
+footer.uabierta-footer h4 {
+  font-family: "Lato", Helvetica, Arial, sans-serif !important;
+}
+
+footer.uabierta-footer {
+  color: #7d736d;
+}
+
+footer.uabierta-footer .footer-bottom {
+  padding-top: 30px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+footer.uabierta-footer ul { 
+  list-style: none outside;
+  margin: 0;
+  margin-right: 12px;
+}
+
+footer.uabierta-footer ul li {
+  display: inline-block;
+  margin-right: 6px;
+}
+
+footer.uabierta-footer ul i {
+  color: #65666C;
+}
+
+footer.uabierta-footer .footer_button {
+  margin: -12px 0 0;
+  padding: 0 15px;
+  border-radius: 50px;
+  color: #65666C!important;
+  background-color: transparent;
+  box-shadow: none!important;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 42px;
+  height: 42px;
+  line-height: 42px!important;
+  font-size: 25px!important;
+  text-align: center;
+  text-decoration: none!important;
+  font-family: inherit!important;
+  transition: color .1s ease-in-out, background-color .1s ease-in-out, border-color .1s ease-in-out;
+}
+
+
+.course-info header.course-profile .intro-inner-wrapper {
+  border-style: solid;
+  border-width: 1px 1px 10px;
+  border-color: rgb(31, 171, 190);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  transform-origin: 50% 50%;
+  opacity: 1;
+  visibility: visible;
+  box-shadow: none !important;
+}
+
+.course-info .course-profile {
+border: none !important;
+box-shadow: none !important;
+}
+
+.course-info .table .media {
+border-top: none;
+}
+
+/* BOTON INSCRIPCION CERRADA */
+
+.course-info .button-closed {
+  background: #f44336 !important;
+  border-radius: 3 px;
+  box-sizing: border-box;
+  color: #ffffff !important;
+  display: block;
+  padding: 15px 0 !important;
+  text-align: center;
+  float: left;
+  margin: 1px 3.57866% 0 0;
+  transition: none;
+  width: 61.158%;
+  font-family: lato;
+  font-size: 15px;
+  font-weight: 900;
+  text-shadow: none;
+  border-color: white !important;
+}
+
+.course-info .enroll-button {
+  background: #00abbe !important;
+  border-radius: 3 px;
+  box-sizing: border-box;
+  color: #ffffff !important;
+  display: block;
+  padding: 15px 0 !important;
+  text-align: center;
+  float: left;
+  margin: 1px 3.57866% 0 0;
+  transition: none;
+  width: 61.158%;
+  font-family: lato;
+  font-size: 15px;
+  font-weight: 900;
+  text-shadow: none !important;
+  border-color: white !important;
+}
+
+/* BORDE BOTON INSCRIPCION */
+
+.course-info header.course-profile .intro-inner-wrapper .intro>.heading-group {
+  border-bottom: 1px solid #c8c8c8;
+  box-shadow: 0 1px 0 0 rgb(255 255 255 / 60%);
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+/* CAJA CURSO */
+
+.course-info .course-sidebar {
+  box-sizing: border-box;
+  float: left;
+  width: 31.76157%;
+  BACKGROUND: #f5f5f5b5;
+  BORDER: 1px solid #cfcece;
+  PADDING: 15px;
+  margin-top: 20px;
+}
+
+/* ICONOS CURSO */
+
+.course-info .course-sidebar .important-dates li .icon {
+  float: left;
+  padding: 1px;
+  margin: 4px 10px 0 0;
+  COLOR: #2583FF;
+}
+
+/* CAJA CURSO INFO DERECHA */
+
+.course-info .course-sidebar .important-dates li .important-dates-item-text {
+  float: right;
+  font-weight: 900;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+/* CAJA CURSO INFO IZQUIERDA */
+
+.course-info .course-sidebar .important-dates li .important-dates-item-title {
+  color: #0c1216;
+  float: left;
+  font-weight: 500;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
 }

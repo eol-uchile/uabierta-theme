@@ -10,65 +10,6 @@
 <% icp_license_info = getattr(settings, 'ICP_LICENSE_INFO', {})%>
 <%namespace name='static' file='static_content.html'/>
 
-<style>
-  footer.uabierta-footer {
-    font-family: "Lato", Helvetica, Arial, sans-serif !important;
-    padding: 45px 0;
-    border-top: 10px solid #00abbe;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  footer.uabierta-footer h4 {
-    font-family: "Lato", Helvetica, Arial, sans-serif !important;
-  }
-
-  footer.uabierta-footer {
-    color: #7d736d;
-  }
-
-  footer.uabierta-footer .footer-bottom {
-    padding-top: 30px;
-    border-top: 1px solid rgba(0,0,0,0.1);
-  }
-
-  footer.uabierta-footer ul { 
-    list-style: none outside;
-    margin: 0;
-    margin-right: 12px;
-  }
-
-  footer.uabierta-footer ul li {
-    display: inline-block;
-    margin-right: 6px;
-  }
-
-  footer.uabierta-footer ul i {
-    color: #65666C;
-  }
-
-  footer.uabierta-footer .footer_button {
-    margin: -12px 0 0;
-    padding: 0 15px;
-    border-radius: 50px;
-    color: #65666C!important;
-    background-color: transparent;
-    box-shadow: none!important;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    width: 42px;
-    height: 42px;
-    line-height: 42px!important;
-    font-size: 25px!important;
-    text-align: center;
-    text-decoration: none!important;
-    font-family: inherit!important;
-    transition: color .1s ease-in-out, background-color .1s ease-in-out, border-color .1s ease-in-out;
-  }
-</style>
-
 <footer class="uabierta-footer mt-3" style="background-image: url(${static.url('edx-uabierta/images/logo_footer/footer.jpg')});">
   <div class="uabierta-container">
     <div class="row">
