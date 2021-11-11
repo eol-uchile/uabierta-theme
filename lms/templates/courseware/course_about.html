@@ -64,6 +64,120 @@ from six import string_types
 <%block name="pagetitle">${course.display_name_with_default}</%block>
 
 
+<style>
+
+.course-info header.course-profile .intro-inner-wrapper {
+    border-style: solid;
+    border-width: 1px 1px 10px;
+    border-color: rgb(31, 171, 190);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    transform-origin: 50% 50%;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none !important;
+}
+
+.course-info .course-profile {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.course-info .table .media {
+  border-top: none;
+}
+
+  /* BOTON INSCRIPCION CERRADA */
+
+  .course-info .button-closed {
+    background: #f44336 !important;
+    border-radius: 3 px;
+    box-sizing: border-box;
+    color: #ffffff !important;
+    display: block;
+    padding: 15px 0 !important;
+    text-align: center;
+    float: left;
+    margin: 1px 3.57866% 0 0;
+    transition: none;
+    width: 61.158%;
+    font-family: lato;
+    font-size: 15px;
+    font-weight: 900;
+    text-shadow: none;
+    border-color: white !important;
+}
+
+.course-info .enroll-button {
+    background: #00abbe !important;
+    border-radius: 3 px;
+    box-sizing: border-box;
+    color: #ffffff !important;
+    display: block;
+    padding: 15px 0 !important;
+    text-align: center;
+    float: left;
+    margin: 1px 3.57866% 0 0;
+    transition: none;
+    width: 61.158%;
+    font-family: lato;
+    font-size: 15px;
+    font-weight: 900;
+    text-shadow: none !important;
+    border-color: white !important;
+}
+
+/* BORDE BOTON INSCRIPCION */
+
+.course-info header.course-profile .intro-inner-wrapper .intro>.heading-group {
+    border-bottom: 1px solid #c8c8c8;
+    box-shadow: 0 1px 0 0 rgb(255 255 255 / 60%);
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+  /* CAJA CURSO */
+
+.course-info .course-sidebar {
+    box-sizing: border-box;
+    float: left;
+    width: 31.76157%;
+    BACKGROUND: #f5f5f5b5;
+    BORDER: 1px solid #cfcece;
+    PADDING: 15px;
+    margin-top: 20px;
+}
+
+/* ICONOS CURSO */
+
+.course-info .course-sidebar .important-dates li .icon {
+    float: left;
+    padding: 1px;
+    margin: 4px 10px 0 0;
+    COLOR: #2583FF;
+}
+
+/* CAJA CURSO INFO DERECHA */
+
+.course-info .course-sidebar .important-dates li .important-dates-item-text {
+    float: right;
+    font-weight: 900;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+/* CAJA CURSO INFO IZQUIERDA */
+
+.course-info .course-sidebar .important-dates li .important-dates-item-title {
+    color: #0c1216;
+    float: left;
+    font-weight: 500;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+</style>
+
 <section class="course-info">
   <%block name="course_about_header">
   <header class="course-profile">
@@ -80,18 +194,11 @@ from six import string_types
 
         <div class="main-cta">
         %if user.is_authenticated and registered:
-          %if show_courseware_link:
             <a href="${course_target}">
-          %endif
-
-          <span class="register disabled">${_("You are enrolled in this course")}</span>
-
-          %if show_courseware_link:
-            <strong>${_("View Course")}</strong>
+            <span class="register disabled">${_("You are enrolled in this course")} ${_("View Course")}</span>
             </a>
-          %endif
         % elif is_course_full:
-          <span class="register disabled">
+          <span class="register disabled button-closed">
             ${_("Course is full")}
           </span>
         % elif invitation_only and not can_enroll:
@@ -100,7 +207,7 @@ from six import string_types
         ## because AnonymousUsers cause can_enroll for shib courses to be False, but we need them to be able to click
         ## so that they can register and become a real user that can enroll.
         % elif not is_shib_course and not can_enroll:
-          <span class="register disabled">${_("Enrollment is Closed")}</span>
+          <span class="register disabled button-closed">${_("Enrollment is Closed")}</span>
         %elif allow_anonymous:
           %if show_courseware_link:
             <a href="${course_target}"><strong>${_("View Course")}</strong></a>
@@ -116,7 +223,7 @@ from six import string_types
             else:
               href_class = "register"
           %>
-          <a href="${reg_href}" class="${href_class}">
+          <a href="${reg_href}" class="${href_class} enroll-button">
             ${_("Inscribirse en {course_name}").format(course_name=course.display_number_with_default)}
           </a>
           <div id="register_error"></div>
