@@ -1,3 +1,7 @@
+<%
+  allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION'))
+%>
+
 <div class="js-form-feedback" aria-live="assertive" tabindex="-1">
 </div>
 <div class="toggle-form">
@@ -37,7 +41,21 @@ asdfasdfasdfasdf
 
     <%= context.fields %>
 
+    <style> 
+    .login-button{
+        background: rgb(32,174,192);
+        background: -moz-linear-gradient(90deg, rgba(32,174,192,1) 0%, rgba(37,131,255,1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(32,174,192,1) 0%, rgba(37,131,255,1) 100%);
+        background: linear-gradient(90deg, rgba(32,174,192,1) 0%, rgba(37,131,255,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#20aec0",endColorstr="#2583ff",GradientType=1);
+    }
+    </style>
+
     <button type="submit" class="action action-primary action-update js-login login-button"><%- gettext("Sign in") %></button>
+
+    % if allow_public_account_creation:
+        <a class="field-link" href="/register" style="display: block;font-size: 12px;margin-top: 0.5rem;text-decoration: none;line-height: 17x;">¿No tienes cuenta? Registrate aquí</a>
+    % endif
 
     <% if ( context.providers.length > 0 && !context.currentProvider || context.hasSecondaryProviders ) { %>
     <div class="login-providers">
