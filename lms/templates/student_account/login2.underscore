@@ -43,10 +43,8 @@ asdfasdfasdfasdf
 
     <button type="submit" class="action action-primary action-update js-login login-button"><%- gettext("Sign in") %></button>
 
-    % if allow_public_account_creation:
-        <a class="field-link" href="/register" style="display: block;font-size: 12px;margin-top: 0.5rem;text-decoration: none;line-height: 17x;">¿No tienes cuenta? Registrate aquí</a>
-    % endif
-
+    <a class="field-link" href="/register" style="display: block;font-size: 12px;margin-top: 0.5rem;text-decoration: none;line-height: 17x;">¿No tienes cuenta? Registrate aquí</a>
+    
     <% if ( context.providers.length > 0 && !context.currentProvider || context.hasSecondaryProviders ) { %>
     <div class="login-providers">
         <div class="section-title lines">
