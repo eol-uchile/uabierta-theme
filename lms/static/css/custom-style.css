@@ -354,3 +354,11 @@ border-top: none;
     text-align: center;
   }
 }
+
+.login-button, .register-button{
+  background: rgb(32,174,192);
+  background: -moz-linear-gradient(90deg, rgba(32,174,192,1) 0%, rgba(37,131,255,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(32,174,192,1) 0%, rgba(37,131,255,1) 100%);
+  background: linear-gradient(90deg, rgba(32,174,192,1) 0%, rgba(37,131,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#20aec0",endColorstr="#2583ff",GradientType=1);
+}
