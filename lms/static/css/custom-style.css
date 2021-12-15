@@ -355,6 +355,8 @@ border-top: none;
   }
 }
 
+/* Login and register */
+
 .login-register button.login-button, .login-register button.register-button{
   background: rgb(32,174,192);
   background: -moz-linear-gradient(90deg, rgba(32,174,192,1) 0%, rgba(37,131,255,1) 100%);
@@ -362,3 +364,10 @@ border-top: none;
   background: linear-gradient(90deg, rgba(32,174,192,1) 0%, rgba(37,131,255,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#20aec0",endColorstr="#2583ff",GradientType=1);
 }
+
+/* Course display */
+
+#main .find-courses{
+  background-color: white !important;
+}
+
