@@ -63,7 +63,6 @@ from six import string_types
 
 <%block name="pagetitle">${course.display_name_with_default}</%block>
 
-
 <section class="course-info">
   <%block name="course_about_header">
   <header class="course-profile">
@@ -80,18 +79,11 @@ from six import string_types
 
         <div class="main-cta">
         %if user.is_authenticated and registered:
-          %if show_courseware_link:
             <a href="${course_target}">
-          %endif
-
-          <span class="register disabled">${_("You are enrolled in this course")}</span>
-
-          %if show_courseware_link:
-            <strong>${_("View Course")}</strong>
+            <span class="register disabled">${_("You are enrolled in this course")} ${_("View Course")}</span>
             </a>
-          %endif
         % elif is_course_full:
-          <span class="register disabled">
+          <span class="register disabled button-closed">
             ${_("Course is full")}
           </span>
         % elif invitation_only and not can_enroll:
@@ -100,7 +92,7 @@ from six import string_types
         ## because AnonymousUsers cause can_enroll for shib courses to be False, but we need them to be able to click
         ## so that they can register and become a real user that can enroll.
         % elif not is_shib_course and not can_enroll:
-          <span class="register disabled">${_("Enrollment is Closed")}</span>
+          <span class="register disabled button-closed">${_("Enrollment is Closed")}</span>
         %elif allow_anonymous:
           %if show_courseware_link:
             <a href="${course_target}"><strong>${_("View Course")}</strong></a>
@@ -116,7 +108,7 @@ from six import string_types
             else:
               href_class = "register"
           %>
-          <a href="${reg_href}" class="${href_class}">
+          <a href="${reg_href}" class="${href_class} enroll-button">
             ${_("Inscribirse en {course_name}").format(course_name=course.display_number_with_default)}
           </a>
           <div id="register_error"></div>

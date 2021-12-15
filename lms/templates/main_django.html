@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load sekizai_tags i18n configuration theme_pipeline optional_include static %}
+<html lang="{{LANGUAGE_CODE}}">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{{ platform_name }}{% endblock %}</title>
+
+  <link rel="icon" type="image/x-icon" href="{% favicon_path %}" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="${static.url('edx-uabierta/css/custom-style.css')}">
+
+  {% with "js/i18n/"|add:LANGUAGE_CODE|add:"/djangojs.js" as i18njs_path %}
+    <script type="text/javascript" src="{% static i18njs_path %}"></script>
+  {% endwith %}
+
+  {% stylesheet 'style-vendor' %}
+  {% stylesheet 'style-main-v1' %}
+
+  {% block main_vendor_js %}
+  {% javascript 'main_vendor' %}
+  {% endblock %}
+  {% block headextra %}{% endblock %}
+  {% render_block "css" %}
+
+  {% optional_include "head-extra.html"|microsite_template_path %}
+
+  <meta name="path_prefix" content="{{EDX_ROOT_URL}}">
+</head>
+
+<body class="{% block bodyclass %}{% endblock %} lang_{{LANGUAGE_CODE}}">
+    {% load render_bundle from webpack_loader %}
+    {% render_bundle "commons" %}
+  <div class="window-wrap" dir="{{LANGUAGE_BIDI|yesno:'rtl,ltr'}}">
+    <a class="nav-skip" href="#main">{% trans "Skip to main content" as tmsg %} | {{ tmsg | force_escape }}</a>
+    {% with course=request.course %}
+      {% include "header.html"|microsite_template_path with online_help_token=online_help_token  %}
+    {% endwith %}
+    <div class="content-wrapper" id="content">
+      {% block body %}{% endblock %}
+      {% block bodyextra %}{% endblock %}
+    </div>
+    {% with course=request.course %}
+      {% include "footer.html"|microsite_template_path %}
+    {% endwith %}
+
+  </div>
+
+    {% javascript 'base_application' %}
+
+    {% render_block "js" %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+{% comment %}
+  This is a django template version of our main page from which all
+  other pages inherit. This file should be rewritten to reflect any
+  changes in main.html! Files used by {% include %} can be written
+  as mako templates.
+
+  Inheriting from this file allows us to include apps that use the
+  django templating system without rewriting all of their views in
+  mako.
+{% endcomment %}

@@ -10,32 +10,14 @@ from lms.djangoapps.ccx.overrides import get_current_ccx
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from six import text_type
 
-# App that handles subdomain specific branding
-from lms.djangoapps.branding import api as branding_api
 %>
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
-<h1 class="header-logo">
-  ##<a href="${branding_api.get_home_url()}">
-    <a href="/">
-    <%block name="navigation_logo">
-    <img  class="logo" src="${static.url('edx-uabierta/images/uabierta/portada/logo_cabecera.png')}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
-    </%block>
-  </a>
-  % if course and request.path != reverse('about_course', args=[text_type(course.id)]):
-    <div class="course-header">
-      <%
-      display_name = course.display_name_with_default
-      if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
-        ccx = get_current_ccx(course.id)
-        if ccx:
-          display_name = ccx.display_name
-      %>
-      <span class="course-name">${display_name}</span>
-    </div>
-  % endif
-</h1>
+
+<%block name="navigation_logo">
+<a class="navbar-brand pl-2 pr-4" href="/">
+  <img class="my-auto" src="${static.url('edx-uabierta/images/logo-uabierta.png')}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+</a>
+</%block>
 % if enable_enterprise_sidebar:
   <div class="enterprise-tagline">
     <% tagline = configuration_helpers.get_value('ENTERPRISE_TAGLINE', settings.ENTERPRISE_TAGLINE) %>
