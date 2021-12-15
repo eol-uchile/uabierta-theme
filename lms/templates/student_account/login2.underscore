@@ -1,7 +1,3 @@
-<%
-  allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION'))
-%>
-
 <div class="js-form-feedback" aria-live="assertive" tabindex="-1">
 </div>
 <div class="toggle-form">
