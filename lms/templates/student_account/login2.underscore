@@ -29,7 +29,6 @@
 <% } %>
 
 <form id="login" class="login-form" tabindex="-1" method="POST">
-asdfasdfasdfasdf
     <p class="sr">
         <% if ( context.providers.length > 0 && !context.currentProvider || context.hasSecondaryProviders ) { %>
             <%- gettext("Sign in here using your email address and password, or use one of the providers listed below.") %>
