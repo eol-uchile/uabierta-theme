@@ -365,6 +365,14 @@ border-top: none;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#20aec0",endColorstr="#2583ff",GradientType=1);
 }
 
+/* Progess Tab */
+
+.progress {
+    display: block !important;
+    height: auto !important;
+    background: none !important;
+}
+
 /* Course display */
 
 #main .find-courses{
