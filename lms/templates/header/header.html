@@ -42,6 +42,26 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
   </script>
 % endif
 
+<style>
+    .alert-eol {
+        min-height: 30px;
+        line-height: 35px;
+        text-align: center;
+        background-color: hsl(19deg 92% 59%);
+        color: white;
+        border-bottom: 1px solid black;
+    }
+    .alert-eol-text{
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+    }
+</style>
+<div class="alert-eol">
+    <span class="alert-eol-text">
+        <b>ATENCIÓN:</b> Los días 6, 13 y 14 de diciembre desde las 18:15pm hasta las 09:00am del día siguiente, el servicio de compra de certificados de UAbierta estará suspendido de manera momentánea.
+    </span>
+</div>
 <header class="uabierta-header ${'slim' if course else ''}">
     % if use_cookie_banner:
         ${static.renderReact(
