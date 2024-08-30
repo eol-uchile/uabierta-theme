@@ -30,7 +30,7 @@
                 <%
                 _.each( context.providers, function( provider) {
                     if ( provider.registerUrl ) { %>
-                        <button type="button" class="button button-primary button-<%- provider.id %> login-provider register-<%- provider.id %>" data-provider-url="<%- provider.registerUrl %>">
+                        <button type="button" class="button button-primary button-<%- provider.id %> login-provider register-<%- provider.id %>" data-provider-url="<%- provider.registerUrl %>" disabled="disabled">
                             <div class="icon <% if ( provider.iconClass ) { %>fa <%- provider.iconClass %><% } %>" aria-hidden="true">
                                 <% if ( provider.iconImage ) { %>
                                     <img class="icon-image" src="<%- provider.iconImage %>" alt="<%- provider.name %> icon" />
