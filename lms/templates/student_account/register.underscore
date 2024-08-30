@@ -1,5 +1,14 @@
 <div class="js-form-feedback" aria-live="assertive" tabindex="-1">
 </div>
+<div class="alert alert-warning pattern-library-shim" role="alert">
+    <h2 style="margin: 0 !important">Atención</h2>
+    <p>
+        A partir del 30 de agosto de 2024 el registro de nuevos usuarios en UAbierta no estará disponible, debido a una actualización general de la plataforma.
+    </p>
+    <p>
+        Muchas gracias por su comprensión.
+    </p>
+</div>
 
 <% if (!context.syncLearnerProfileData) { %>
 	<div class="toggle-form">
@@ -54,7 +63,7 @@
     <%= context.fields /* xss-lint: disable=underscore-not-escaped */ %>
 
     <div class="form-field checkbox-optional_fields_toggle">
-        <input type="checkbox" id="toggle_optional_fields" class="input-block checkbox"">
+        <input type="checkbox" id="toggle_optional_fields" class="input-block checkbox">
         <label for="toggle_optional_fields">
             <span class="label-text">
                 <%- gettext("Support education research by providing additional information") %>
@@ -62,7 +71,7 @@
         </label>
     </div>
 
-    <button type="submit" class="action action-primary action-update js-register register-button">
+    <button type="submit" class="action action-primary action-update js-register register-button" disabled="disabled">
     	<% if ( context.registerFormSubmitButtonText ) { %><%- context.registerFormSubmitButtonText %><% } else { %><%- gettext("Create Account") %><% } %>
     </button>
 </form>
